@@ -2,7 +2,7 @@
     width: 1440px;
     height: 128px;
     display: flex;
-    background-color: red;
+    /* background-color: red; */
 }
 
 .logo {
@@ -32,5 +32,6 @@ a {
     font-size: 20px;
     font-weight: 500;
     font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
 }
 
