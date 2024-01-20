@@ -1,0 +1,36 @@
+.headerMain {
+    width: 1440px;
+    height: 128px;
+    display: flex;
+    background-color: red;
+}
+
+.logo {
+    width: 70px;
+    height: 70px;
+    margin-top: 30px;
+    margin-left: 40px;
+}
+
+.basket {
+    width: 48px;
+    height: 48px;
+    margin-top: 41px;
+    margin-left: 373px;
+}
+
+.navBar {
+    width: 518px;
+    height: 26px;
+    margin-top: 54px;
+    margin-left: 351px;
+    display: flex;
+    gap: 32px;
+}
+
+a {
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+}
+
