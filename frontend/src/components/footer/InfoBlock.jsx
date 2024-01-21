@@ -2,7 +2,6 @@ import React from "react";
 import style from "./InfoBlock.module.css";
 
 export default function InfoBlock(props) {
-    debugger;
     return (
         <div className={style.infoBlock}>
             <p className={style.title}>{props.title}</p>
