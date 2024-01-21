@@ -1,0 +1,27 @@
+.GetDiscount {
+    width: 1360px;
+    height: 486px;
+    margin-left: 40px;
+    background-color: green;
+    border-radius: 10px;
+}
+.title {
+    font-size: 64px;
+    font-weight: 700;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    color: rgba(255, 255, 255, 1);
+    padding-top: 32px;
+}
+
+.form {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.GetDiscountMain {
+    display: flex;
+    margin-top: 17px;
+}

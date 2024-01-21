@@ -1,0 +1,16 @@
+.input {
+    width: 516px;
+    height: 58px;
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: green;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: "Montserrat", sans-serif;
+    color: rgba(255, 255, 255, 1);
+    padding-left: 32px;
+    
+}
+::placeholder {
+    color: rgba(255, 255, 255, 1);
+}
