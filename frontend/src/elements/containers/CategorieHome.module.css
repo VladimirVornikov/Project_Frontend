@@ -1,0 +1,39 @@
+.CategorieHomeContainer {
+    width: 1360px;
+    height: 528px;
+    background-color: aqua;
+    margin: 40px;
+}
+
+.categorieDiv {
+    width: 316px;
+    height: 392px;
+}
+
+.categoriesContainer {
+    display: flex;
+    gap: 32px;
+}
+
+.img {
+    width: 316px;
+    height: 350px;
+    border-radius: 10px;
+}
+p {
+    text-align: center;
+    margin-top: 16px;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: "Montserrat", sans-serif;
+    color: rgba(40, 40, 40, 1);
+}
+
+h1{
+    font-size: 64px;
+    font-weight: 700;
+    font-family: "Montserrat", sans-serif;
+    color: rgba(40, 40, 40, 1);
+    margin-bottom: 40px;
+
+}
