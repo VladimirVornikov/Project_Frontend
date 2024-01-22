@@ -11,7 +11,7 @@ export default function InfoBlock(props) {
             {props.images && (
                 <div className={style.socialMedia}>
                     {props.images.map((social, index) => (
-                        <img key={index} src={social} alt="No social image"/>
+                        <img  className= {style.img} key={index} src={social} alt="No social image"/>
                     ))}
                 </div>
             )}

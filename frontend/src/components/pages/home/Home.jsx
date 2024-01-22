@@ -7,8 +7,8 @@ export default function Home() {
   return (
     <div>
         <DiscountInfoContainer/>
-        <GetDiscountContainer/>
         <CategorieHome/>
+        <GetDiscountContainer/>
     </div>
   )
 }

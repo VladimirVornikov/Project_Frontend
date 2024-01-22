@@ -1,0 +1,31 @@
+.NotFoundContainer{
+    width: 691px;
+    height: 530px;
+    margin: 80px 375px 80px 375px;
+}
+
+.ErrorInfo {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.h1 {
+    font-size: 64px;
+    font-weight: 700;
+    font-family: "Montserrat", sans-serif;
+    color: rgba(40, 40, 40, 1);
+    margin-bottom: 16px;
+    line-height: 70.4px;
+}
+
+.p {
+    font-size: 20px;
+    font-weight: 500;
+    font-family: "Montserrat", sans-serif;
+    color: rgba(139, 139, 139, 1);
+    text-align: center;
+    line-height: 26px;
+    margin-bottom: 28px;
+}
