@@ -2,6 +2,7 @@ import React from "react";
 import style from "./NotFound.module.css";
 import ErrorImage from "../../../elements/images/404.png";
 import BackToMainBtn from "../../../elements/buttonCard/CheckOutBtn";
+import {Link} from 'react-router-dom';
 
 export default function NotFound() {
     return (
@@ -14,7 +15,9 @@ export default function NotFound() {
                     <br />
                     Please go back to the homepage
                 </p>
-                <BackToMainBtn color={"green"} info={"Go Home"} width={"209px"}/>
+                <Link to={"/"}>
+                    <BackToMainBtn color={"green"} info={"Go Home"} width={"209px"}/>
+                </Link>
             </div>
         </div>
     );

@@ -1,8 +1,9 @@
-.CategorieHomeContainer {
+.CategoriesContainer {
     width: 1360px;
     height: 528px;
     margin-left: 40px;
     margin-bottom: 80px;
+
 }
 
 .categorieDiv {
@@ -12,11 +13,11 @@
 
 .categoriesContainer {
     display: flex;
-    gap: 32px;
+    gap: 30px;
 }
 
 .img {
-    width: 316px;
+    width: 248px;
     height: 350px;
     border-radius: 10px;
 }

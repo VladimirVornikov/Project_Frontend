@@ -31,7 +31,9 @@
 a {
     font-size: 20px;
     font-weight: 500;
+    color: black;
     font-family: 'Montserrat', sans-serif;
     cursor: pointer;
+    text-decoration: none;
 }
 
