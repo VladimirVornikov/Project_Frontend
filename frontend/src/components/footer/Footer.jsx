@@ -4,13 +4,14 @@ import style from './Footer.module.css'
 import Map from './map/Map'
 import Insta from '../../elements/images/ic-instagram.png'
 import Whatsapp from '../../elements/images/ic-whatsapp.png'
+import Title from '../../elements/inputs/Title'
 
 export default function Footer() {
 
   const socialMedia = [Insta, Whatsapp]
   return (
     <div className={style.footer}>
-      <h1 className={style.footerTitle}>Contact</h1>
+      <Title title={"Contact"}/>
       <footer className={style.footerInfoContainer}>
         <InfoBlock title={"Phone"} text={'+49 999 999 99 99'}/>
         <InfoBlock title={"Socials"} images={socialMedia}/>

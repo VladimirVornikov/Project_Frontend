@@ -3,6 +3,7 @@ import style from "./Categories.module.css";
 import {useDispatch, useSelector} from "react-redux";
 import {fetchCategoriesList} from "../../../store/asyncAction/categorie";
 import Breadcrumbs from "../../../elements/inputs/Breadcrumbs";
+import Title from "../../../elements/inputs/Title";
 
 export default function CategorieHome() {
     const categories = useSelector((store) => store.categories);
@@ -15,7 +16,7 @@ export default function CategorieHome() {
     return (
             <div className={style.CategoriesContainer}>
                 <span className={style.spanCategories}>
-                    <h1 className={style.h1}>Categories</h1>
+                    <Title title={"Categories"}/>
                 </span>
                 <div className={style.categoriesContainer}>
                     {categories.map((categorie) => (

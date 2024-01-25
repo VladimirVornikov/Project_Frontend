@@ -19,6 +19,8 @@
     width: 316px;
     height: 350px;
     border-radius: 10px;
+    object-fit: cover;
+    object-position: 100%;
 }
 .p {
     text-align: center;
@@ -27,14 +29,6 @@
     font-weight: 500;
     font-family: "Montserrat", sans-serif;
     color: rgba(40, 40, 40, 1);
-}
-
-.h1{
-    font-size: 64px;
-    font-weight: 700;
-    font-family: "Montserrat", sans-serif;
-    color: rgba(40, 40, 40, 1);
-    margin-bottom: 40px;
 }
 
 .spanCategories {

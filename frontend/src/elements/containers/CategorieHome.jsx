@@ -4,6 +4,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {fetchCategoriesList} from "../../store/asyncAction/categorie";
 import AllCategoriesBtn from "../buttonCard/AllCategoriesBtn";
 import { Link } from "react-router-dom";
+import Title from "../inputs/Title";
 
 export default function CategorieHome() {
     const categories = useSelector((store) => store.categories);
@@ -16,7 +17,7 @@ export default function CategorieHome() {
     return (
         <div className={style.CategorieHomeContainer}>
             <span className={style.spanCategories}>
-                <h1 className={style.h1}>Categories</h1>
+                <Title title={"Categories"}/>
                 <hr className={style.hr}/>
                 <Link to="/categories">
                     <AllCategoriesBtn/>
