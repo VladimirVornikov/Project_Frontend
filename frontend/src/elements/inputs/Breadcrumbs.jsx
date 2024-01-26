@@ -4,10 +4,8 @@ import style from './Breadcrumbs.module.css'
 
 export default function Breadcrumbs() {
     const location = useLocation();
-    const site = ["categories", "/"]
-    console.log(location);
+    const site = ["categories", "/",]
     const crumbs = location.pathname.split('/').slice(1)
-    console.log(crumbs); 
 
     if(site.some(category => crumbs.includes(category))) {
         return (

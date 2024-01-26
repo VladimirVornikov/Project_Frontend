@@ -33,9 +33,6 @@
     color: rgba(40, 40, 40, 1);
 }
 
-.spanCategories {
-    display: flex;
-}
 
 .hr {
     flex: 1;

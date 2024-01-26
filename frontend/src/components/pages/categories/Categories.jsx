@@ -1,9 +1,9 @@
 import React, {useEffect} from "react";
 import style from "./Categories.module.css";
 import {useDispatch, useSelector} from "react-redux";
-import {fetchCategoriesList} from "../../../store/asyncAction/categorie";
-import Breadcrumbs from "../../../elements/inputs/Breadcrumbs";
+import {fetchCategoriesList} from "../../../store/asyncAction/fetchCategories";
 import Title from "../../../elements/inputs/Title";
+import {Link} from "react-router-dom";
 
 export default function CategorieHome() {
     const categories = useSelector((store) => store.categories);
@@ -14,21 +14,23 @@ export default function CategorieHome() {
     }, []);
 
     return (
-            <div className={style.CategoriesContainer}>
-                <span className={style.spanCategories}>
-                    <Title title={"Categories"}/>
-                </span>
-                <div className={style.categoriesContainer}>
-                    {categories.map((categorie) => (
-                        <div key={categorie.id} className={style.categorieDiv}>
+        <div className={style.CategoriesContainer}>
+            <Title title={"Categories"} />
+            <div className={style.categoriesContainer}>
+                {categories.map((categorie) => (
+                    <div key={categorie.id} className={style.categorieDiv}>
+                        <Link
+                            to={`/categories/${categorie.title.toLowerCase()}`}
+                        >
                             <img
                                 className={style.img}
                                 src={`http://localhost:3333${categorie.image}`}
                             />
-                            <p className={style.p}>{categorie.title}</p>
-                        </div>
-                    ))}
-                </div>
+                        </Link>
+                        <p className={style.p}>{categorie.title}</p>
+                    </div>
+                ))}
             </div>
+        </div>
     );
 }

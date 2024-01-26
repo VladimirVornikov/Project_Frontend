@@ -1,7 +1,7 @@
 import React from 'react'
 import DiscountInfoContainer from '../../../elements/containers/DiscountInfoContainer'
 import GetDiscountContainer from '../../../elements/containers/GetDiscountContainer'
-import CategorieHome from '../../../elements/containers/CategorieHome'
+import CategorieHome from '../../../elements/containers/CategoriesHome'
 
 export default function Home() {
   return (
