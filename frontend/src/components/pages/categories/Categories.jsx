@@ -10,7 +10,7 @@ export default function CategorieHome() {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        dispatch(fetchCategoriesList());
+        dispatch(fetchCategoriesList())
     }, []);
 
     return (
@@ -19,9 +19,7 @@ export default function CategorieHome() {
             <div className={style.categoriesContainer}>
                 {categories.map((categorie) => (
                     <div key={categorie.id} className={style.categorieDiv}>
-                        <Link
-                            to={`/categories/${categorie.title.toLowerCase()}`}
-                        >
+                        <Link to={`/categories/${categorie.id}`}>
                             <img
                                 className={style.img}
                                 src={`http://localhost:3333${categorie.image}`}

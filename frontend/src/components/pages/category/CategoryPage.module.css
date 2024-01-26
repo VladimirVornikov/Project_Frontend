@@ -1,0 +1,94 @@
+.CategoryProducts {
+    width: 1360px;
+    height: 1062px;
+    margin-left: 40px;
+    margin-bottom: 80px;
+}
+
+.productList {
+    width: 1360px;
+    height: 876px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 32px;
+}
+.productContainer {
+    display: flex;
+    flex-direction: column;
+    width: 316px;
+    border: 1px solid rgba(221, 221, 221, 1);
+    border-radius: 10px;
+    justify-content: space-between;
+}
+
+.img {
+    width: 316px;
+    height: 284px;
+    border: 1px solid rgba(221, 221, 221, 1);
+    border-radius: 10px 10px 0 0;
+    margin-bottom: 20px;
+    object-fit: cover;
+    object-position: 100%;
+}
+
+.name {
+    font-size: 20px;
+    font-weight: 500;
+    font-family: "Montserrat", sans-serif;
+    line-height: 26px;
+    color:rgba(40, 40, 40, 1);
+    margin: 0 32px 16px 32px;
+    text-align: center;
+}
+
+.priceContainer {
+    display: flex;
+    gap: 16px;
+    margin-left: 32px;
+    margin-bottom: 32px;
+    
+}
+
+.price {
+    font-size: 40px;
+    font-weight: 600;
+    font-family: "Montserrat", sans-serif;
+    line-height: 44px;
+    color: rgba(40, 40, 40, 1);
+    
+    
+}
+
+.discontPrice {
+    font-size: 20px;
+    font-weight: 500;
+    font-family: "Montserrat", sans-serif;
+    line-height: 26px;
+    color: rgba(139, 139, 139, 1);
+    margin-top: 16px;
+    text-decoration: line-through;
+
+    
+}
+
+.addToCartBtn {
+    height: 58px;
+    color: rgba(255, 255, 255, 1);
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: "Montserrat", sans-serif;
+    cursor: pointer;
+    background-color: green;
+    width: 284px;
+    margin-left: 16px;
+    position: absolute;
+    margin-top: 210px;
+    opacity: 0;
+}
+
+.img:hover .addToCartBtn,
+.addToCartBtn:hover {
+    transition: opacity 0.3s ease;
+    opacity: 1;
+}
