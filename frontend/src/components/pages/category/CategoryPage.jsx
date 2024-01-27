@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { ROOT_URL } from '../../..'
 import { useParams } from 'react-router-dom'
 import Title from '../../../elements/inputs/Title'
-import Button from '../../../elements/buttonCard/CheckOutBtn'
+import FilterBar from '../../../elements/containers/FilterBar'
 
 export default function CategoryPage() {
     const dispatch = useDispatch()
@@ -21,7 +21,7 @@ export default function CategoryPage() {
     <div>
         <div className={style.CategoryProducts}>
             <Title title={category.title}/>
-            <div>IN PROGRESS</div>
+            <FilterBar/>
             <div className={style.productList}>
                 {category.products.map(product => 
                     <div key={product.id} className={style.productContainer}>

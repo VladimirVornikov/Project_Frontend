@@ -1,0 +1,63 @@
+.filterContainer {
+    width: 908px;
+    height: 36px;
+    margin-bottom: 40px;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+label {
+    font-size: 20px;
+    font-weight: 600;
+    font-family: "Montserrat", sans-serif;
+    line-height: 26px;
+    color: rgba(40, 40, 40, 1);
+}
+
+span {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.inputRange {
+    width: 112px;
+    height: 36px;
+    border: 1px solid rgba(221, 221, 221, 1);
+    border-radius: 10px;
+    padding-left: 16px;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: "Montserrat", sans-serif;
+    line-height: 20px;
+}
+
+.inputRange::placeholder {
+    font-size: 16px;
+    font-weight: 500;
+    font-family: "Montserrat", sans-serif;
+    line-height: 20px;
+    color: rgba(139, 139, 139, 1);
+
+}
+
+.inputCheckBox {
+    width: 36px;
+    height: 36px;
+    border: 1px solid rgba(221, 221, 221, 1);
+}
+
+.select {
+    width: 200px;
+    height: 36px;
+    border: 1px solid rgba(221, 221, 221, 1);
+    border-radius: 10px;
+    font-size: 16px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    line-height: 20px;
+    color: rgba(40, 40, 40, 1);
+    padding-left: 16px;
+    
+}

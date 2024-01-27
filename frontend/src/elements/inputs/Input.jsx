@@ -10,6 +10,6 @@ export default function Input(props) {
             type={type}
             id={id}
             name={name}
-        ></input>
+        />
     );
 }
