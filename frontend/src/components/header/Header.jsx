@@ -18,7 +18,9 @@ export default function Header() {
                 <Link to={"/products"}>
                     <a>All products</a>
                 </Link>
-                <a>All sales</a>
+                <Link to={"/allSales"}>
+                    <a>All sales</a>
+                </Link>
             </nav>
             <img src={Basket} alt="No image" className={style.basket}/>
         </div>

@@ -1,0 +1,8 @@
+.productContainer {
+    width: 1360px;
+    height: 574px;
+    margin-left: 40px;
+    margin-bottom: 80px;
+    background-color: red;
+    display: flex;
+}

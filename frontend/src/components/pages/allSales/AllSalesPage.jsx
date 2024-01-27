@@ -1,18 +1,19 @@
 import React, { useEffect } from 'react'
 import style from '../category/CategoryPage.module.css'
-import { fetchAllProducts } from '../../../store/asyncAction/fetchCategories'
-import { useDispatch, useSelector } from 'react-redux'
-import { ROOT_URL } from '../../..'
-import { Link } from 'react-router-dom'
-import FilterBar from '../../../elements/containers/FilterBar'
-import Title from '../../../elements/inputs/Title'
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchAllSales } from '../../../store/asyncAction/fetchCategories';
+import Title from '../../../elements/inputs/Title';
+import FilterBar from '../../../elements/containers/FilterBar';
+import { Link } from 'react-router-dom';
+import { ROOT_URL } from '../../..';
 
-export default function AllProducts() {
+export default function AllSalesPage() {
     const dispatch = useDispatch()
     const productsList = useSelector(store => store.allProducts)
 
-    useEffect(() =>{
-      dispatch(fetchAllProducts())
+    console.log(productsList.product);
+    useEffect(() => {
+       dispatch(fetchAllSales())
     }, [])
 
   return (

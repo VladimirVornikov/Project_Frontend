@@ -1,7 +1,8 @@
-import { ROOT_URL } from "../.."
+import { allSalesAction, productsAllAction } from "../reducers/productsAllReducer"
 import { asyncCategoriesListAction } from "../reducers/categoriesReducer"
 import { categoryProductAction } from "../reducers/categoryByIdReducer"
-import { productsAllAction } from "../reducers/productsAllReducer"
+import { productAction } from "../reducers/productReducer"
+import { ROOT_URL } from "../.."
 
 
 
@@ -26,6 +27,21 @@ export function fetchAllProducts() {
         fetch(ROOT_URL + "/products/all")
             .then(result => result.json())
             .then(data => dispatch(productsAllAction(data)))
+    }
+}
+
+export function fetchAllSales() {
+    return function(dispatch) {
+        fetch(ROOT_URL + "/products/all")
+            .then(result => result.json())
+            .then(data => dispatch(allSalesAction(data)))
+    }
+}
+export function fetchProduct(id) {
+    return function(dispatch) {
+        fetch(ROOT_URL + "/products/" + id)
+            .then(result => result.json())
+            .then(data => dispatch(productAction(data)))
     }
 }
 
