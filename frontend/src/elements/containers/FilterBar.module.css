@@ -15,7 +15,7 @@ label {
     color: rgba(40, 40, 40, 1);
 }
 
-span {
+.span {
     display: flex;
     gap: 16px;
     align-items: center;

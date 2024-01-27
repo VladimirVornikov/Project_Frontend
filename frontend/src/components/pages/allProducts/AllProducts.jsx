@@ -1,29 +1,30 @@
 import React, { useEffect } from 'react'
-import style from './CategoryPage.module.css'
-import { fetchCategory } from '../../../store/asyncAction/fetchCategories'
+import style from '../category/CategoryPage.module.css'
+import { fetchAllProducts } from '../../../store/asyncAction/fetchCategories'
 import { useDispatch, useSelector } from 'react-redux'
 import { ROOT_URL } from '../../..'
-import { Link, useParams } from 'react-router-dom'
-import Title from '../../../elements/inputs/Title'
+import { Link } from 'react-router-dom'
 import FilterBar from '../../../elements/containers/FilterBar'
+import Title from '../../../elements/inputs/Title'
 
-export default function CategoryPage() {
+export default function AllProducts() {
     const dispatch = useDispatch()
-    const {id} = useParams()
-    const category = useSelector(store => store.category)
+    const productsList = useSelector(store => store.allProducts)
 
-    useEffect(() => {
-            dispatch(fetchCategory(id))
+    console.log(productsList.product);
+    useEffect(() =>{
+      dispatch(fetchAllProducts())
     }, [])
 
-    return (
-        <div className={style.CategoryProducts}>
-            <Title title={category.title}/>
+  return (
+    <div>
+      <div className={style.CategoryProducts}>
+            <Title title={productsList.title}/>
             <FilterBar/>
             <div className={style.productList}>
-                {category.products.map(product => 
+                {productsList.products.map(product => 
                     <div key={product.id} className={style.productContainer}>
-                        <Link to={`/categories/${id}/${product.id}`}>
+                        <Link to={`/categories//${product.id}`}>
                             <img src={ROOT_URL + product.image} className={style.img}/>
                         </Link>
                         <button className={style.addToCartBtn}>Add to Cart</button>
@@ -39,10 +40,12 @@ export default function CategoryPage() {
                 )}
             </div>
         </div>
-    )
+    </div>
+  )
 }
 
 
+
 function discountPercentage(price, discount) {
-    return "-" + Math.round(Number(100 * (price - discount) /price))+"%"
+  return "-" + Math.round(Number(100 * (price - discount) /price))+"%"
 }

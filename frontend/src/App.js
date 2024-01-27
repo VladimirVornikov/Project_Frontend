@@ -7,6 +7,7 @@ import NotFound from "./components/pages/notFound/NotFound";
 import {Routes, Route, Link} from "react-router-dom";
 import Breadcrumbs from "./elements/inputs/Breadcrumbs";
 import CategoryPage from "./components/pages/category/CategoryPage";
+import AllProducts from "./components/pages/allProducts/AllProducts";
 
 
 
@@ -20,6 +21,7 @@ function App() {
                     <Route path="/" element={<Home/>}/>
                     <Route path="/categories" element={<Categories/>}/>
                     <Route path="/categories/:id" element={<CategoryPage/>}/>
+                    <Route path="/products" element={<AllProducts/>}/>
                     <Route path="/*" element={<NotFound />} />
                 </Routes>
                 <Footer />

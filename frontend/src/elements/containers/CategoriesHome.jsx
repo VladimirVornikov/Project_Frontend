@@ -27,7 +27,7 @@ export default function CategoriesHome() {
                 {categories.slice(0, -1).map((categorie) => (
                     <div key={categorie.id} className={style.categorieDiv}>
                         <Link
-                            to={`/categories/${categorie.title.toLowerCase()}`}
+                            to={`/categories/${categorie.id}`}
                         >
                             <img
                                 className={style.img}

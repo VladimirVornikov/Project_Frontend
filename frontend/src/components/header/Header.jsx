@@ -15,7 +15,9 @@ export default function Header() {
                 <Link to={'/categories'}>
                     <a>Categories</a>
                 </Link>
-                <a>All products</a>
+                <Link to={"/products"}>
+                    <a>All products</a>
+                </Link>
                 <a>All sales</a>
             </nav>
             <img src={Basket} alt="No image" className={style.basket}/>
