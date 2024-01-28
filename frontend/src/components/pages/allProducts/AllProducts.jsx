@@ -23,7 +23,7 @@ export default function AllProducts() {
             <div className={style.productList}>
                 {productsList.products.map(product => 
                     <div key={product.id} className={style.productContainer}>
-                        <Link to={`/categories//${product.id}`}>
+                        <Link to={`/categories/${product.id}`}>
                             <img src={ROOT_URL + product.image} className={style.img}/>
                         </Link>
                         <button className={style.addToCartBtn}>Add to Cart</button>

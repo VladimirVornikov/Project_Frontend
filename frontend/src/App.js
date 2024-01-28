@@ -10,6 +10,7 @@ import Header from "./components/header/Header";
 import Home from "./components/pages/home/Home";
 import "./App.css";
 import Product from "./components/pages/product/Product";
+import RenderingPage from "./components/pages/renderingPage/RenderingPage";
 
 function App() {
     return (
@@ -21,8 +22,8 @@ function App() {
                     <Route path="/categories" element={<Categories/>}/>
                     <Route path="/categories/:id" element={<CategoryPage/>}/>
                     <Route path="/categories/:id/:name" element={<Product/>}/>
-                    <Route path="/products" element={<AllProducts/>}/>
-                    <Route path="/allSales" element={<AllSalesPage/>}/>
+                    <Route path="/products" element={<RenderingPage type={"All products"}/>}/>
+                    <Route path="/allSales" element={<RenderingPage type={"Sales"}/>}/>
                     <Route path="/*" element={<NotFound />} />
                 </Routes>
                 <Footer />

@@ -17,10 +17,9 @@ export default function AllSalesPage() {
     }, [])
 
   return (
-    <div>
-      <div className={style.CategoryProducts}>
-            <Title title={productsList.title}/>
-            <FilterBar/>
+    <div className={style.CategoryProducts}>
+      <Title title={productsList.title}/>
+      <FilterBar/>
             <div className={style.productList}>
                 {productsList.products.map(product => 
                     <div key={product.id} className={style.productContainer}>
@@ -39,7 +38,6 @@ export default function AllSalesPage() {
                     </div>
                 )}
             </div>
-        </div>
     </div>
   )
 }
