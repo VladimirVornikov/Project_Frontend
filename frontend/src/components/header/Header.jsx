@@ -7,7 +7,9 @@ import {Link} from 'react-router-dom'
 export default function Header() {
     return (
         <div className={style.headerMain}>
-            <img src={Logo} alt="No image" className={style.logo} />
+            <Link to={"/"}>
+                <img src={Logo} alt="No image" className={style.logo} />
+            </Link>
             <nav className={style.navBar}>
                 <Link to={"/"}>
                     <a>Main page</a>
