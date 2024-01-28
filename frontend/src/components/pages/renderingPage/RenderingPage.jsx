@@ -1,4 +1,5 @@
-import { fetchAllProducts, fetchAllSales, fetchCategory } from '../../../store/asyncAction/fetchCategories';
+import { fetchAllProducts, fetchAllSales, fetchCategory, fetchSale } from '../../../store/asyncAction/fetchCategories';
+import ShowButton from '../../../elements/buttonCard/ShowButton';
 import FilterBar from '../../../elements/containers/FilterBar';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useParams } from 'react-router-dom';
@@ -8,24 +9,31 @@ import React, { useEffect } from 'react'
 import { ROOT_URL } from '../../..';
 
 export default function RenderingPage(props) {
+    
+    const productsList = useSelector(store => store.allProducts)
     const {id} = useParams()
     const dispatch = useDispatch()
-    
     useEffect(() => {
         dispatch(props.type === "Sales" ? fetchAllSales() :
                 props.type === "CategoryProducts" ? fetchCategory(id) :
+                props.type === "Sale" ? fetchSale() :
                 fetchAllProducts())
-                console.log(productsList);
     }, [id, props.type, dispatch])
-
-    const productsList = useSelector(store => store.allProducts)
-    console.log(productsList);
 
     
     return (
         <div className={style.CategoryProducts}>
         <Title title={productsList.title}/>
-        <FilterBar/>
+        {props.type === "Sale" ?
+        <span className={style.spanCategories}>
+                <Title title={"Sale"} />
+                <hr className={style.hr} />
+                <Link to="/allSales">
+                    <ShowButton title={'All sales'}/>
+                </Link>
+        </span> :
+        <FilterBar/> }
+
             <div className={style.productList}>
                 {productsList.products.map(product => 
                     <div key={product.id} className={style.productContainer}>

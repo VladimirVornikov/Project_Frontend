@@ -19,7 +19,7 @@ function App() {
                     <Route path="/categories" element={<Categories/>}/>
                     <Route path="/categories/:id" element={<RenderingPage type={"CategoryProducts"}/>}/>
                     <Route path="/categories/:id/:id" element={<Product/>}/>
-                    <Route path="/products" element={<RenderingPage type={"All products"}/>}/>
+                    <Route path="/allProducts" element={<RenderingPage type={"All products"}/>}/>
                     <Route path="/allSales" element={<RenderingPage type={"Sales"}/>}/>
                     <Route path="/*" element={<NotFound />} />
                 </Routes>

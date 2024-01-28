@@ -1,8 +1,8 @@
-import React, {useEffect} from "react";
-import style from "./Categories.module.css";
-import {useDispatch, useSelector} from "react-redux";
 import {fetchCategoriesList} from "../../../store/asyncAction/fetchCategories";
+import {useDispatch, useSelector} from "react-redux";
 import Title from "../../../elements/inputs/Title";
+import style from "./Categories.module.css";
+import React, {useEffect} from "react";
 import {Link} from "react-router-dom";
 
 export default function CategorieHome() {

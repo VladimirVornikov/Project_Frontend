@@ -1,9 +1,9 @@
-import { useParams } from 'react-router-dom'
-import { useDispatch, useSelector } from 'react-redux'
-import React, { useEffect } from 'react'
-import style from './Product.module.css'
 import { fetchProduct } from '../../../store/asyncAction/fetchCategories'
 import Button from '../../../elements/buttonCard/CheckOutBtn'
+import { useDispatch, useSelector } from 'react-redux'
+import { useParams } from 'react-router-dom'
+import React, { useEffect } from 'react'
+import style from './Product.module.css'
 
 export default function Product() {
     const product = useSelector(store => store.product)

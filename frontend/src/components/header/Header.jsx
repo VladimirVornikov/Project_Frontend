@@ -17,7 +17,7 @@ export default function Header() {
                 <Link to={'/categories'}>
                     <a>Categories</a>
                 </Link>
-                <Link to={"/products"}>
+                <Link to={"/allProducts"}>
                     <a>All products</a>
                 </Link>
                 <Link to={"/allSales"}>

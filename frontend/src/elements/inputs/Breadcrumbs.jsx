@@ -24,7 +24,7 @@ function changeIndexToName(array) {
 export default function Breadcrumbs() {
 
     const location = useLocation();
-    const site = ["categories", "/",]
+    const site = ["categories", "/", "allSales", "allProducts"]
     const crumbs = changeIndexToName(location.pathname.split('/').slice(1))
     
 
