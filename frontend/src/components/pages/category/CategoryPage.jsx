@@ -10,7 +10,7 @@ import FilterBar from '../../../elements/containers/FilterBar'
 export default function CategoryPage() {
     const dispatch = useDispatch()
     const {id} = useParams()
-    const category = useSelector(store => store.category)
+    const category = useSelector(store => store.allProducts)
 
     useEffect(() => {
             dispatch(fetchCategory(id))

@@ -1,6 +1,5 @@
-import { allSalesAction, productsAllAction } from "../reducers/productsAllReducer"
+import { allSalesAction, categoryProductAction, productsAllAction } from "../reducers/productsAllReducer"
 import { asyncCategoriesListAction } from "../reducers/categoriesReducer"
-import { categoryProductAction } from "../reducers/categoryByIdReducer"
 import { productAction } from "../reducers/productReducer"
 import { ROOT_URL } from "../.."
 

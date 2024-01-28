@@ -1,6 +1,4 @@
-import AllProducts from "./components/pages/allProducts/AllProducts";
 import CategoryPage from "./components/pages/category/CategoryPage";
-import AllSalesPage from "./components/pages/allSales/AllSalesPage";
 import Categories from "./components/pages/categories/Categories";
 import NotFound from "./components/pages/notFound/NotFound";
 import Breadcrumbs from "./elements/inputs/Breadcrumbs";
