@@ -7,6 +7,7 @@ import Title from '../../../elements/inputs/Title';
 import style from './RenderingPage.module.css'
 import React, { useEffect } from 'react'
 import { ROOT_URL } from '../../..';
+import { clearDataAction } from '../../../store/reducers/productsAllReducer';
 
 export default function RenderingPage(props) {
     
@@ -18,6 +19,7 @@ export default function RenderingPage(props) {
                 props.type === "CategoryProducts" ? fetchCategory(id) :
                 props.type === "Sale" ? fetchSale() :
                 fetchAllProducts())
+        return () => { dispatch(clearDataAction());};
     }, [id, props.type, dispatch])
 
     
