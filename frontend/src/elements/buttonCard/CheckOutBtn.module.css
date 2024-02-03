@@ -1,4 +1,4 @@
-.CheckOutButton {
+.checkOutButton {
     height: 58px;
     color: rgba(255, 255, 255, 1);
     border-radius: 5px;
@@ -6,4 +6,11 @@
     font-weight: 600;
     font-family: "Montserrat", sans-serif;
     cursor: pointer;
+    background-color: rgba(51, 153, 51, 1);
 }
+
+.checkOutButton:hover {
+    background-color: white;
+    color: black;
+}
+

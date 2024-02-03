@@ -1,4 +1,5 @@
 import { fetchAllProducts, fetchAllSales, fetchCategory, fetchSale } from '../../../store/asyncAction/fetchCategories';
+import { clearDataAction } from '../../../store/reducers/productsAllReducer';
 import ShowButton from '../../../elements/buttonCard/ShowButton';
 import FilterBar from '../../../elements/containers/FilterBar';
 import { useDispatch, useSelector } from 'react-redux';
@@ -7,13 +8,13 @@ import Title from '../../../elements/inputs/Title';
 import style from './RenderingPage.module.css'
 import React, { useEffect } from 'react'
 import { ROOT_URL } from '../../..';
-import { clearDataAction } from '../../../store/reducers/productsAllReducer';
 
 export default function RenderingPage(props) {
     
     const productsList = useSelector(store => store.allProducts)
     const {id} = useParams()
     const dispatch = useDispatch()
+    
     useEffect(() => {
         dispatch(props.type === "Sales" ? fetchAllSales() :
                 props.type === "CategoryProducts" ? fetchCategory(id) :
@@ -25,16 +26,18 @@ export default function RenderingPage(props) {
     
     return (
         <div className={style.CategoryProducts}>
-        <Title title={productsList.title}/>
-        {props.type === "Sale" ?
-        <span className={style.spanCategories}>
-                <Title title={"Sale"} />
-                <hr className={style.hr} />
-                <Link to="/allSales">
-                    <ShowButton title={'All sales'}/>
-                </Link>
-        </span> :
-        <FilterBar/> }
+            {props.type === "Sale" ?
+            <span className={style.spanCategories}>
+                    <Title title={productsList.title} />
+                    <hr className={style.hr} />
+                    <Link to="/allSales">
+                        <ShowButton title={'All sales'}/>
+                    </Link>
+            </span> :
+            <>
+            <Title title={productsList.title}/>
+            <FilterBar/> 
+            </>}
 
             <div className={style.productList}>
                 {productsList.products.map(product => 

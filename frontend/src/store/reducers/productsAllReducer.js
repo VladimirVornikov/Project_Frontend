@@ -21,7 +21,7 @@ export const productsAllReducer = (state = defaultState, action) => {
             return {title: `${action.payload.category.title}`, products: [...action.payload.data]}
         case SALE_PRODUCT:
             const slicedArray = action.payload.filter((item) => item.discont_price).slice(0,4)
-            return {titel: "Sale", products: [...slicedArray]}
+            return {title: "Sale", products: [...slicedArray]}
         case CLEAR_DATA:
             return defaultState; // Очищаем данные, вернув начальное состояние
         default:

@@ -16,7 +16,7 @@ export default function NotFound() {
                     Please go back to the homepage
                 </p>
                 <Link to={"/"}>
-                    <BackToMainBtn color={"green"} info={"Go Home"} width={"209px"}/>
+                    <BackToMainBtn info={"Go Home"} width={"209px"}/>
                 </Link>
             </div>
         </div>

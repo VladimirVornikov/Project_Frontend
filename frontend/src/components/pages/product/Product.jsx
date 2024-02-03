@@ -31,7 +31,7 @@ export default function Product() {
                     <p className={style.price}>1</p>
                     <button className={style.addSubButtons}>+</button>
                 </span>
-                <Button color={"green"} info={"Add to cart"} width={"316px"} />
+                <Button info={"Add to cart"} width={"316px"} />
             </form>
             <h3 className={style.description}>Description</h3>
             <p className={style.infoBlock}>{product.description}</p>
