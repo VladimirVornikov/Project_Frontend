@@ -76,9 +76,14 @@
     line-height: 26px;
     font-family: "Montserrat", sans-serif;
     font-weight: 600;
-    color: rgba(40, 40, 40, 1);
     align-self: center;
+    width: 80px;
+    height: 50px;
+    border: none;
+    text-align: center;
 }
+
+
 
 .form {
     display: flex;

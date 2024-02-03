@@ -17,6 +17,9 @@ export default function FilterBar() {
             <label htmlFor="sort_category">Sorted</label>
             <select className={style.select} name="sort_category">
                 <option value="">by default</option>
+                <option value="newest">newest</option>
+                <option value="high-low">price: high-low</option>
+                <option value="low-high">price: low-high</option>
             </select>
         </span>
 

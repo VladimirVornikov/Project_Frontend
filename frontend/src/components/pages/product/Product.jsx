@@ -2,10 +2,12 @@ import { fetchProduct } from '../../../store/asyncAction/fetchCategories'
 import Button from '../../../elements/buttonCard/CheckOutBtn'
 import { useDispatch, useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import style from './Product.module.css'
+import { decrAction, incrAction, setAction } from '../../../store/reducers/counter'
 
 export default function Product() {
+    const counter = useSelector(store => store.counter)
     const product = useSelector(store => store.product)
     const {id} = useParams()
     const dispatch = useDispatch()
@@ -27,12 +29,20 @@ export default function Product() {
             </span>
             <form className={style.form}>
                 <span className={style.additionSubtraction}>
-                    <button className={style.addSubButtons}>-</button>
-                    <p className={style.price}>1</p>
-                    <button className={style.addSubButtons}>+</button>
+                    <button onClick={() => { console.log("Decrement clicked"); dispatch(decrAction()); }} className={style.addSubButtons} type='button'>-</button>
+
+                    <input
+                        onChange={(e) => { console.log("Input value changed"); dispatch(setAction(Number(e.target.value) || 1)); }}
+                        placeholder={counter}
+                        className={style.price}
+                        type={"text"}
+                    ></input>
+
+                    <button onClick={() => { console.log("Increment clicked"); dispatch(incrAction()); }} className={style.addSubButtons} type='button'>+</button>
                 </span>
                 <Button info={"Add to cart"} width={"316px"} />
             </form>
+
             <h3 className={style.description}>Description</h3>
             <p className={style.infoBlock}>{product.description}</p>
         </div>

@@ -24,7 +24,9 @@ export default function Header() {
                     <a>All sales</a>
                 </Link>
             </nav>
-            <img src={Basket} alt="No image" className={style.basket}/>
+            <Link to={"/cart"}>
+                <img src={Basket} alt="No image" className={style.basket}/>
+            </Link>
         </div>
     );
 }

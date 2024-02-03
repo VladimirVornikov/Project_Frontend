@@ -8,6 +8,7 @@ import Footer from "./components/footer/Footer";
 import Header from "./components/header/Header";
 import Home from "./components/pages/home/Home";
 import "./App.css";
+import Cart from "./components/pages/cart/Cart";
 
 function App() {
     return (
@@ -22,6 +23,7 @@ function App() {
                     <Route path="/allProducts" element={<RenderingPage type={"All products"}/>}/>
                     <Route path="/allSales" element={<RenderingPage type={"Sales"}/>}/>
                     <Route path="/*" element={<NotFound />} />
+                    <Route path="/cart" element={<Cart/>}/>
                 </Routes>
                 <Footer />
         </div>
