@@ -29,16 +29,18 @@ export default function Product() {
             </span>
             <form className={style.form}>
                 <span className={style.additionSubtraction}>
-                    <button onClick={() => { console.log("Decrement clicked"); dispatch(decrAction()); }} className={style.addSubButtons} type='button'>-</button>
+                    <button onClick={() =>  dispatch(decrAction())} 
+                        className={style.addSubButtons} type='button'>-</button>
 
                     <input
-                        onChange={(e) => { console.log("Input value changed"); dispatch(setAction(Number(e.target.value) || 1)); }}
-                        placeholder={counter}
+                        onChange={(e) =>  dispatch(setAction(Number(e.target.value) || 1))}
                         className={style.price}
                         type={"text"}
-                    ></input>
+                        value={counter}
+                    />
 
-                    <button onClick={() => { console.log("Increment clicked"); dispatch(incrAction()); }} className={style.addSubButtons} type='button'>+</button>
+                    <button onClick={() => dispatch(incrAction())} 
+                        className={style.addSubButtons} type='button'>+</button>
                 </span>
                 <Button info={"Add to cart"} width={"316px"} />
             </form>

@@ -7,11 +7,11 @@ const SET = "SET";
 export const counterProduct = (state = defaultState, action) => {
     switch (action.type) {
         case INCR:
-            return state + 1;
+            return state < 25 ? state + 1 : state;
         case DECR:
             return state > 1 ? state - 1 : state;
         case SET:
-            return action.payload > 1 ? state = action.payload : state;
+            return action.payload > 1 && action.payload < 25 ? action.payload : state;
         default:
             return state;
     }
