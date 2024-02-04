@@ -5,6 +5,7 @@ import { useParams } from 'react-router-dom'
 import React, { useEffect}  from 'react'
 import style from './Product.module.css'
 import { decr, incr, set } from '../../../store/reducers/counterSlice'
+import { addProduct } from '../../../store/reducers/cartSlice'
 
 export default function Product() {
     const product = useSelector(store => store.product)
@@ -16,6 +17,12 @@ export default function Product() {
         dispatch(set(1))
         dispatch(fetchProduct(id))
     }, [id])
+
+    const cartAddHandler = (event) => {
+        event.preventDefault()
+        const productToCart = {...product, quantity: counter}
+        dispatch(addProduct(productToCart))
+    }
 
     return (
         <div className={style.productContainer}>
@@ -29,16 +36,17 @@ export default function Product() {
                             <span className={style.discountBlock}>{discountPercentage(product.price, product.discont_price)}</span>
                             ) : null}
                 </span>
-                <form className={style.form}>
+                <form onSubmit={cartAddHandler} className={style.form}>
                     <span className={style.additionSubtraction}>
                         <button onClick={() =>  dispatch(decr())} 
                             className={style.addSubButtons} type='button'>-</button>
 
                         <input
-                            onChange={(e) =>  dispatch(set(Number(e.target.value) || 1))}
+                            onChange={(e) =>  dispatch(set(Number(e.target.value)))}
                             className={style.price}
                             type={"text"}
                             value={counter}
+                            name='counter'
                         />
 
                         <button onClick={() => dispatch(incr())} 

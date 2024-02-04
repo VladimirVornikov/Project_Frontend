@@ -1,5 +1,5 @@
-import { asyncCategoriesListAction } from "../reducers/categoriesReducer"
 import { ROOT_URL } from "../.."
+import { asyncCategoriesList } from "../reducers/categoriesSlice"
 import { allSales, categoryProduct, productsAllList, saleProduct } from "../reducers/productsAllSlice"
 import { product } from "../reducers/productSlice"
 
@@ -9,7 +9,7 @@ export function fetchCategoriesList() {
     return function(dispatch) {
         fetch(ROOT_URL + "/categories/all")
             .then(result => result.json())
-            .then(data => dispatch(asyncCategoriesListAction(data)))
+            .then(data => dispatch(asyncCategoriesList(data)))
     }
 }
 
