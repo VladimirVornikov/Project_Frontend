@@ -4,8 +4,9 @@ import { useDispatch, useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
 import React, { useEffect}  from 'react'
 import style from './Product.module.css'
-import { decr, incr, set } from '../../../store/reducers/counterSlice'
+import { set } from '../../../store/reducers/counterSlice'
 import { addProduct } from '../../../store/reducers/cartSlice'
+import Counter from '../../../elements/containers/Counter'
 
 export default function Product() {
     const product = useSelector(store => store.product)
@@ -37,21 +38,7 @@ export default function Product() {
                             ) : null}
                 </span>
                 <form onSubmit={cartAddHandler} className={style.form}>
-                    <span className={style.additionSubtraction}>
-                        <button onClick={() =>  dispatch(decr())} 
-                            className={style.addSubButtons} type='button'>-</button>
-
-                        <input
-                            onChange={(e) =>  dispatch(set(Number(e.target.value)))}
-                            className={style.price}
-                            type={"text"}
-                            value={counter}
-                            name='counter'
-                        />
-
-                        <button onClick={() => dispatch(incr())} 
-                            className={style.addSubButtons} type='button'>+</button>
-                    </span>
+                    <Counter number={counter}/>
                     <Button info={"Add to cart"} width={"316px"} />
                 </form>
 

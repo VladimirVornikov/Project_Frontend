@@ -49,42 +49,6 @@
 
 }
 
-.addSubButtons {
-    width: 58px;
-    height: 58px;
-    border: 1px solid rgba(221, 221, 221, 1);
-    border-radius: 5px;
-    font-size: 20px;
-    line-height: 26px;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 600;
-    color: rgba(139, 139, 139, 1);
-    cursor: pointer;
-    
-}
-.additionSubtraction {
-    display: flex;
-    width: 200px;
-    height: 59px;
-    border: 1px solid rgba(221, 221, 221, 1);
-    border-radius: 5px;
-    justify-content: space-between;
-}
-
-.price {
-    font-size: 20px;
-    line-height: 26px;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 600;
-    align-self: center;
-    width: 80px;
-    height: 50px;
-    border: none;
-    text-align: center;
-}
-
-
-
 .form {
     display: flex;
     gap: 32px;

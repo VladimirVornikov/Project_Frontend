@@ -25,3 +25,49 @@
     margin-top: 45px;
     margin-left: 30px;
 }
+
+.product {
+    width: 780px;
+    height: 180px;
+    border: 1px solid rgba(221, 221, 221, 1);
+    border-radius: 10px;
+    display: flex;
+}
+
+.imgProduct {
+    width: 200px;
+    height: 180px;
+    border-radius: 10px;
+    border: 1px solid rgba(221, 221, 221, 1);
+    object-fit: cover;
+    object-position: 100%;
+}
+
+
+.priceContainer {
+    display: flex;
+    gap: 16px;
+    margin-left: 32px;
+    margin-bottom: 32px;
+    
+}
+
+.price {
+    font-size: 40px;
+    font-weight: 600;
+    font-family: "Montserrat", sans-serif;
+    line-height: 44px;
+    color: rgba(40, 40, 40, 1);
+    
+    
+}
+
+.discontPrice {
+    font-size: 20px;
+    font-weight: 500;
+    font-family: "Montserrat", sans-serif;
+    line-height: 26px;
+    color: rgba(139, 139, 139, 1);
+    margin-top: 16px;
+    text-decoration: line-through;
+}

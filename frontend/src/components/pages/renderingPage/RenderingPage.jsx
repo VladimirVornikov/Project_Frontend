@@ -14,6 +14,7 @@ export default function RenderingPage(props) {
     const productsList = useSelector(store => store.allProducts)
     const {id} = useParams()
     const dispatch = useDispatch()
+
     
     useEffect(() => {
         dispatch(props.type === "Sales" ? fetchAllSales() :
