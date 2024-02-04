@@ -1,5 +1,4 @@
 import { fetchAllProducts, fetchAllSales, fetchCategory, fetchSale } from '../../../store/asyncAction/fetchCategories';
-import { clearDataAction } from '../../../store/reducers/productsAllReducer';
 import ShowButton from '../../../elements/buttonCard/ShowButton';
 import FilterBar from '../../../elements/containers/FilterBar';
 import { useDispatch, useSelector } from 'react-redux';
@@ -8,6 +7,7 @@ import Title from '../../../elements/inputs/Title';
 import style from './RenderingPage.module.css'
 import React, { useEffect } from 'react'
 import { ROOT_URL } from '../../..';
+import { clearData } from '../../../store/reducers/productsAllSlice';
 
 export default function RenderingPage(props) {
     
@@ -20,7 +20,7 @@ export default function RenderingPage(props) {
                 props.type === "CategoryProducts" ? fetchCategory(id) :
                 props.type === "Sale" ? fetchSale() :
                 fetchAllProducts())
-        return () => { dispatch(clearDataAction());};
+        return () => { dispatch(clearData());};
     }, [id, props.type, dispatch])
 
     

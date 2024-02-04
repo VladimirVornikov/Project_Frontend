@@ -1,7 +1,7 @@
-import { allSalesAction, categoryProductAction, productsAllAction, saleProductAction } from "../reducers/productsAllReducer"
 import { asyncCategoriesListAction } from "../reducers/categoriesReducer"
-import { productAction } from "../reducers/productReducer"
 import { ROOT_URL } from "../.."
+import { allSales, categoryProduct, productsAllList, saleProduct } from "../reducers/productsAllSlice"
+import { product } from "../reducers/productSlice"
 
 
 
@@ -17,7 +17,7 @@ export function fetchCategory(id) {
     return function(dispatch) {
         fetch(ROOT_URL + '/categories/' + id)
             .then(result => result.json())
-            .then(data => dispatch(categoryProductAction(data)))
+            .then(data => dispatch(categoryProduct(data)))
     }
 }
 
@@ -25,7 +25,7 @@ export function fetchAllProducts() {
     return function(dispatch) {
         fetch(ROOT_URL + "/products/all")
             .then(result => result.json())
-            .then(data => dispatch(productsAllAction(data)))
+            .then(data => dispatch(productsAllList(data)))
     }
 }
 
@@ -33,7 +33,7 @@ export function fetchAllSales() {
     return function(dispatch) {
         fetch(ROOT_URL + "/products/all")
             .then(result => result.json())
-            .then(data => dispatch(allSalesAction(data)))
+            .then(data => dispatch(allSales(data)))
     }
 }
 
@@ -41,7 +41,7 @@ export function fetchSale() {
     return function(dispatch) {
         fetch(ROOT_URL + "/products/all")
             .then(result => result.json())
-            .then(data => dispatch(saleProductAction(data)))
+            .then(data => dispatch(saleProduct(data)))
     }
 }
 
@@ -49,7 +49,7 @@ export function fetchProduct(id) {
     return function(dispatch) {
         fetch(ROOT_URL + "/products/" + id)
             .then(result => result.json())
-            .then(data => dispatch(productAction(data)))
+            .then(data => dispatch(product(data)))
     }
 }
 

@@ -11,7 +11,7 @@ export const counterProduct = (state = defaultState, action) => {
         case DECR:
             return state > 1 ? state - 1 : state;
         case SET:
-            return action.payload > 1 && action.payload < 25 ? action.payload : state;
+            return action.payload >= 1 && action.payload < 25 ? action.payload : state;
         default:
             return state;
     }
