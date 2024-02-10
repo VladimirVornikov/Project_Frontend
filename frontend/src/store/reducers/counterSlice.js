@@ -7,13 +7,13 @@ const counterProduct = createSlice ({
     initialState,
     reducers: {
         incr(state) {
-            return state < 25 ? state + 1 : state
+            return state < 100 ? state + 1 : state
         },
         decr(state) {
             return state > 1 ? state - 1 : state
         },
         set(state, action) {
-            return action.payload >= 1 && action.payload < 25 ? action.payload : state;
+            return action.payload >= 1 && action.payload < 100 ? action.payload : state;
         }
     }
 })

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import style from "./Cart.module.css";
 import Title from "../../../elements/inputs/Title";
 import Button from "../../../elements/buttonCard/CheckOutBtn";
@@ -12,6 +12,7 @@ export default function Cart() {
     const products = useSelector((store) => store.cart);
     console.log(products);
 
+
     return (
         <div className={style.emptyCart}>
             
@@ -24,21 +25,37 @@ export default function Cart() {
             </span>
 
             {products.length > 0 ?
-                <div className={style.cartWithProducts}>
-                    {products.map((element) => (
-                        <span className={style.product}>
-                            <img src={ROOT_URL + `${element.image}`} className={style.imgProduct}/>
-                            <div className={style.counterInfo}>
-                                <p>{element.title}</p>
-                                <Counter number={element.quantity} />
-                            </div>
-                            <span className={style.priceContainer}>
-                                <p className={style.price}>{element.discont_price ? `$${element.discont_price}` : `$${element.price}`}</p>
-                                <p className={style.discontPrice}>{element.discont_price ? `$${element.price}` : ''}</p>
+                <span className={style.cartWrapper}>
+                    <div className={style.cartWithProducts}>
+                        {products.map((element) => (
+                            <span className={style.product}>
+                                <img src={ROOT_URL + `${element.image}`} className={style.imgProduct}/>
+                                <span className={style.productWrapper}>
+                                    <div className={style.counterInfo}>
+                                        <p>{element.title}</p>
+                                        <div>X</div>
+                                    </div>
+                                    <span className={style.priceContainer}>
+                                        <Counter number={element.quantity} id={element.id}/>
+                                        <span className={style.priceAndDiscount}>
+                                            <p className={style.price}>{element.discont_price ? `$${element.discont_price}` : `$${element.price}`}</p>
+                                            <p className={style.discontPrice}>{element.discont_price ? `$${element.price}` : ''}</p>
+                                        </span>
+                                    </span>
+                                </span>
                             </span>
-                        </span>
-                    ))}
-                </div>
+                        ))}
+                    </div>
+
+                    <div className={style.orderDetails}>
+                            <h1>Order Details</h1>
+                            <h2>3 items</h2>
+                            <div>
+                                <p>Total</p>
+                                <p>$520</p>
+                            </div>
+                    </div>
+                </span>
             :
                 <>
                 <h1 className={style.cartInfo}>

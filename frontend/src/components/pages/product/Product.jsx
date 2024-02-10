@@ -21,6 +21,7 @@ export default function Product() {
 
     const cartAddHandler = (event) => {
         event.preventDefault()
+        dispatch(set(1))
         const productToCart = {...product, quantity: counter}
         dispatch(addProduct(productToCart))
     }

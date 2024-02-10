@@ -1,9 +1,7 @@
 .emptyCart {
     margin-left: 40px;
-    margin-bottom: 80px;
     margin-top: 40px;
     width: 1360px;
-    height: 226px;
 }
 .cartInfo {
     font-size: 20px;
@@ -13,6 +11,7 @@
     color: rgba(40, 40, 40, 1);
     margin-bottom: 32px;
 }
+
 
 .spanCart {
     display: flex;
@@ -32,25 +31,38 @@
     border: 1px solid rgba(221, 221, 221, 1);
     border-radius: 10px;
     display: flex;
+    margin-bottom: 16px;
+    gap: 32px;
+
 }
 
 .imgProduct {
     width: 200px;
     height: 180px;
-    border-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
     border: 1px solid rgba(221, 221, 221, 1);
     object-fit: cover;
     object-position: 100%;
 }
 
 
-.priceContainer {
+.productWrapper{ 
     display: flex;
-    gap: 16px;
-    margin-left: 32px;
-    margin-bottom: 32px;
-    
+    flex-direction: column;
+    padding-top: 32px;
+    padding-right: 32px;
+    padding-bottom: 32px;
+    gap: 32px;
+    width: max-content;
+    flex: 1;
 }
+
+.counterInfo {
+    display: flex;
+    justify-content: space-between;
+}
+
 
 .price {
     font-size: 40px;
@@ -58,8 +70,6 @@
     font-family: "Montserrat", sans-serif;
     line-height: 44px;
     color: rgba(40, 40, 40, 1);
-    
-    
 }
 
 .discontPrice {
@@ -70,4 +80,37 @@
     color: rgba(139, 139, 139, 1);
     margin-top: 16px;
     text-decoration: line-through;
+}
+
+
+.cartWithProducts {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.priceContainer {
+    display: flex;
+    gap: 32px;
+}
+
+.priceAndDiscount {
+    display: flex;
+    padding-top: 7px;
+    gap: 16px;
+}
+
+
+
+.orderDetails {
+    background-color: red;
+    width: 548px;
+    height: 582px;
+    border-radius: 10px;
+}
+
+.cartWrapper{
+    display: flex;
+    gap: 32px;
 }
