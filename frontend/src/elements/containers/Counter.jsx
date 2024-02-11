@@ -1,14 +1,12 @@
 import React from 'react'
 import style from "./Counter.module.css"
-import { decr, incr, set } from '../../store/reducers/counterSlice'
 import { decrCart, incrCart, setCart } from '../../store/reducers/cartSlice'
+import { decr, incr, set } from '../../store/reducers/counterSlice'
 import { useDispatch } from 'react-redux'
 
 export default function Counter(props) {
     const {number, id} = props
-    console.log(id);
     const dispatch = useDispatch();
-
     return (
             <span className={style.additionSubtraction}>
                 <button 
@@ -24,6 +22,5 @@ export default function Counter(props) {
                     onClick={id ? () => dispatch(incrCart(id)) : () => dispatch(incr())}
                     className={style.addSubButtons} type='button'>+</button>
             </span>
-
     )
 }

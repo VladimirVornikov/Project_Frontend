@@ -1,31 +1,72 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { product } from "./productSlice";
 
-const initialState = [];
+const initialState = {
+    items: [],
+    totalSum: 0,
+    countItem: 0,
+};
 
-const cart = createSlice ({
+const cart = createSlice({
     name: "cart",
     initialState,
     reducers: {
         addProduct(state, action) {
-            const productExists = state.findIndex(product => product.id === action.payload.id);
+            const productExists = state.items.findIndex(product => product.id === action.payload.id);
             if (productExists !== -1) {
-                state[productExists].quantity += action.payload.quantity;
+                state.items[productExists].quantity += action.payload.quantity;
             } else {
-                state.push({ ...action.payload });
+                state.items.push({ ...action.payload });
             }
         },
         incrCart(state, action) {
-            return state.map((product) => (product.id === action.payload ? { ...product, quantity: product.quantity + 1 } : product));
+            return {
+                ...state,
+                items: state.items.map(product =>
+                    product.id === action.payload
+                        ? { ...product, quantity: (product.quantity >= 1 && product.quantity < 100 ? product.quantity + 1 : product.quantity) }
+                        : product
+                ),
+            };
         },
         decrCart(state, action) {
-            return state.map((product) => (product.id === action.payload ? { ...product, quantity: product.quantity - 1 } : product));
+            return {
+                ...state,
+                items: state.items.map(product =>
+                    product.id === action.payload
+                        ? { ...product, quantity: (product.quantity > 1 && product.quantity <= 100 ? product.quantity - 1 : product.quantity) }
+                        : product
+                )
+            };
         },
         setCart(state, action) {
-            return state.map((product) => (product.id === action.payload.id ? { ...product, quantity: action.payload.quantity } : product))
-        }
-    }
-})
+            return {
+                ...state,
+                items: state.items.map(product =>
+                    (product.id === action.payload.id
+                        ? { ...product, quantity: (action.payload.quantity >= 1 && action.payload.quantity <= 100 ? action.payload.quantity : product.quantity) }
+                        : product
+                    )
+                )
+            };
+        },
+        deleteProduct(state, action) {
+            return {
+                ...state,
+                items: state.items.filter(product => product.id !== action.payload)
+            };
+        },
+        updateTotalSumAndCountItem(state) {
+            state.totalSum = state.items.reduce((accumulator, currentItem) =>
+            accumulator + currentItem.quantity * (currentItem.discont_price ? currentItem.discont_price : currentItem.price), 0);
+            
+
+            state.countItem = state.items.reduce((accumulator, currentItem) =>
+                accumulator + currentItem.quantity, 0);
+        },
+    },
+});
+
 
 export default cart.reducer;
-export const { addProduct, incrCart, decrCart, setCart } = cart.actions;
+export const { addProduct, incrCart, decrCart, setCart, deleteProduct, updateTotalSumAndCountItem } = cart.actions;
+

@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom'
 import React, { useEffect}  from 'react'
 import style from './Product.module.css'
 import { set } from '../../../store/reducers/counterSlice'
-import { addProduct } from '../../../store/reducers/cartSlice'
+import { addProduct, updateTotalSumAndCountItem } from '../../../store/reducers/cartSlice'
 import Counter from '../../../elements/containers/Counter'
 
 export default function Product() {
@@ -24,6 +24,7 @@ export default function Product() {
         dispatch(set(1))
         const productToCart = {...product, quantity: counter}
         dispatch(addProduct(productToCart))
+        dispatch(updateTotalSumAndCountItem())
     }
 
     return (

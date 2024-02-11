@@ -8,6 +8,7 @@ import style from './RenderingPage.module.css'
 import React, { useEffect } from 'react'
 import { ROOT_URL } from '../../..';
 import { clearData } from '../../../store/reducers/productsAllSlice';
+import { addProduct, updateTotalSumAndCountItem } from '../../../store/reducers/cartSlice';
 
 export default function RenderingPage(props) {
     
@@ -24,7 +25,12 @@ export default function RenderingPage(props) {
         return () => { dispatch(clearData());};
     }, [id, props.type, dispatch])
 
-    
+    function addItemToCart(product) {
+        const productToCart = { ...product, quantity: 1 };
+        dispatch(addProduct(productToCart));
+        dispatch(updateTotalSumAndCountItem());
+    }
+
     return (
         <div className={style.CategoryProducts}>
             {props.type === "Sale" ?
@@ -46,7 +52,7 @@ export default function RenderingPage(props) {
                         <Link to={`/categories/${id ? id : product.categoryId}/${product.id}`}>
                             <img src={ROOT_URL + product.image} className={style.img}/>
                         </Link>
-                        <button className={style.addToCartBtn}>Add to Cart</button>
+                        <button onClick={() => addItemToCart(product)} className={style.addToCartBtn}>Add to Cart</button>
                         {product.discont_price ? (
                         <span className={style.discountBlock}>{discountPercentage(product.price, product.discont_price)}</span>
                         ) : null}

@@ -4,13 +4,19 @@ import Title from "../../../elements/inputs/Title";
 import Button from "../../../elements/buttonCard/CheckOutBtn";
 import ShowButton from "../../../elements/buttonCard/ShowButton";
 import {Link} from "react-router-dom";
-import {useSelector} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import {ROOT_URL} from "../../..";
 import Counter from "../../../elements/containers/Counter";
+import { deleteProduct, updateTotalSumAndCountItem } from "../../../store/reducers/cartSlice";
 
 export default function Cart() {
     const products = useSelector((store) => store.cart);
+    const dispatch = useDispatch();
     console.log(products);
+
+    useEffect(() => {
+        dispatch(updateTotalSumAndCountItem())
+    }, [products])
 
 
     return (
@@ -24,16 +30,16 @@ export default function Cart() {
                 </Link>
             </span>
 
-            {products.length > 0 ?
+            {products.items.length > 0 ?
                 <span className={style.cartWrapper}>
                     <div className={style.cartWithProducts}>
-                        {products.map((element) => (
+                        {products.items.map(element => (
                             <span className={style.product}>
                                 <img src={ROOT_URL + `${element.image}`} className={style.imgProduct}/>
                                 <span className={style.productWrapper}>
                                     <div className={style.counterInfo}>
-                                        <p>{element.title}</p>
-                                        <div>X</div>
+                                        <p className={style.productName}>{element.title}</p>
+                                        <div  className={style.cross} onClick={() => dispatch(deleteProduct(element.id))}>X</div>
                                     </div>
                                     <span className={style.priceContainer}>
                                         <Counter number={element.quantity} id={element.id}/>
@@ -49,10 +55,10 @@ export default function Cart() {
 
                     <div className={style.orderDetails}>
                             <h1>Order Details</h1>
-                            <h2>3 items</h2>
+                            <h2>{products.countItem > 1 ? `${products.countItem} items` : `${products.countItem} item`}</h2>
                             <div>
                                 <p>Total</p>
-                                <p>$520</p>
+                                <p>${products.totalSum}</p>
                             </div>
                     </div>
                 </span>

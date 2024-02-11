@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Logo from "../../elements/images/logo.png";
 import Basket from "../../elements/images/basket=empty.png";
 import style from "./Header.module.css";
 import {Link} from 'react-router-dom' 
+import { useDispatch, useSelector } from "react-redux";
+import { updateTotalSumAndCountItem } from "../../store/reducers/cartSlice";
 
 export default function Header() {
+    const itemsNumber = useSelector(store => store.cart.countItem)
+
     return (
         <div className={style.headerMain}>
             <Link to={"/"}>
@@ -24,7 +28,8 @@ export default function Header() {
                     <a>All sales</a>
                 </Link>
             </nav>
-            <Link to={"/cart"}>
+            <Link to={"/cart"} className={style.basketContainer} >
+                {itemsNumber > 0 ? <p className={style.itemsInBasket}>{itemsNumber}</p> : ''}
                 <img src={Basket} alt="No image" className={style.basket}/>
             </Link>
         </div>
