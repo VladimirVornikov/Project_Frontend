@@ -39,34 +39,6 @@
 
 }
 
-.priceContainer {
-    display: flex;
-    gap: 16px;
-    margin-left: 32px;
-    margin-bottom: 32px;
-    
-}
-
-.price {
-    font-size: 40px;
-    font-weight: 600;
-    font-family: "Montserrat", sans-serif;
-    line-height: 44px;
-    color: rgba(40, 40, 40, 1);
-    
-    
-}
-
-.discontPrice {
-    font-size: 20px;
-    font-weight: 500;
-    font-family: "Montserrat", sans-serif;
-    line-height: 26px;
-    color: rgba(139, 139, 139, 1);
-    margin-top: 16px;
-    text-decoration: line-through;
-}
-
 .addToCartBtn {
     height: 58px;
     color: rgba(255, 255, 255, 1);
@@ -87,23 +59,6 @@
 .productContainer:hover .addToCartBtn {
     transition: opacity 0.5s ease;
     opacity: 1;
-}
-
-.discountBlock {
-    width: 63px;
-    height: 34px;
-    background-color: rgba(51, 153, 51, 1);
-    color: rgba(255, 255, 255, 1);
-    border-radius: 5px;
-    font-size: 20px;
-    font-weight: 600;
-    font-family: "Montserrat", sans-serif;
-    line-height: 26px;
-    text-align: center;
-    padding-top: 4px;
-    position: absolute;
-    margin-top: 16px;
-    margin-left: 237px;
 }
 
 .spanCategories {

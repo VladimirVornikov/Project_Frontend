@@ -25,7 +25,7 @@
     margin-left: 30px;
 }
 
-.product {
+.productContainer {
     width: 780px;
     height: 180px;
     border: 1px solid rgba(221, 221, 221, 1);
@@ -38,7 +38,6 @@
 
 .imgProduct {
     width: 200px;
-    height: 180px;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     border: 1px solid rgba(221, 221, 221, 1);
@@ -63,26 +62,6 @@
     justify-content: space-between;
 }
 
-
-.price {
-    font-size: 40px;
-    font-weight: 600;
-    font-family: "Montserrat", sans-serif;
-    line-height: 44px;
-    color: rgba(40, 40, 40, 1);
-}
-
-.discontPrice {
-    font-size: 20px;
-    font-weight: 500;
-    font-family: "Montserrat", sans-serif;
-    line-height: 26px;
-    color: rgba(139, 139, 139, 1);
-    margin-top: 16px;
-    text-decoration: line-through;
-}
-
-
 .cartWithProducts {
     height: auto;
     display: flex;
@@ -92,15 +71,8 @@
 
 .priceContainer {
     display: flex;
-    gap: 32px;
+    align-items: baseline;
 }
-
-.priceAndDiscount {
-    display: flex;
-    padding-top: 7px;
-    gap: 16px;
-}
-
 
 
 .orderDetails {

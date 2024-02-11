@@ -57,7 +57,7 @@ const cart = createSlice({
         },
         updateTotalSumAndCountItem(state) {
             state.totalSum = state.items.reduce((accumulator, currentItem) =>
-            accumulator + currentItem.quantity * (currentItem.discont_price ? currentItem.discont_price : currentItem.price), 0);
+            accumulator + currentItem.quantity * (currentItem.discont_price ? currentItem.discont_price : currentItem.price), 0).toFixed(2);
             
 
             state.countItem = state.items.reduce((accumulator, currentItem) =>

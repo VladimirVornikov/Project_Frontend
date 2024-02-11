@@ -7,6 +7,7 @@ import style from './Product.module.css'
 import { set } from '../../../store/reducers/counterSlice'
 import { addProduct, updateTotalSumAndCountItem } from '../../../store/reducers/cartSlice'
 import Counter from '../../../elements/containers/Counter'
+import PriceContainer from '../../../elements/containers/PriceContainer'
 
 export default function Product() {
     const product = useSelector(store => store.product)
@@ -32,26 +33,14 @@ export default function Product() {
             <img src={`http://localhost:3333${product.image}`} className={style.img}/>
             <div>
                 <h3 className={style.title}>{product.title}</h3>
-                <span className={style.priceContainer}>
-                    <p className={style.mainPrice}>{`$${product.discont_price ? product.discont_price : product.price}`}</p>
-                    <p className={style.discountPrice}>{product.discont_price ? `$${product.price}` : ''}</p>
-                    {product.discont_price ? (
-                            <span className={style.discountBlock}>{discountPercentage(product.price, product.discont_price)}</span>
-                            ) : null}
-                </span>
+                <PriceContainer price={product.price} discount={product.discont_price} isProduct={true}/>
                 <form onSubmit={cartAddHandler} className={style.form}>
                     <Counter number={counter}/>
                     <Button info={"Add to cart"} width={"316px"} />
                 </form>
-
                 <h3 className={style.description}>Description</h3>
                 <p className={style.infoBlock}>{product.description}</p>
             </div>
         </div>
     )
-}
-
-
-function discountPercentage(price, discount) {
-    return "-" + Math.round(Number(100 * (price - discount) /price))+"%"
 }

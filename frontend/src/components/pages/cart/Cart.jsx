@@ -8,11 +8,11 @@ import {useDispatch, useSelector} from "react-redux";
 import {ROOT_URL} from "../../..";
 import Counter from "../../../elements/containers/Counter";
 import { deleteProduct, updateTotalSumAndCountItem } from "../../../store/reducers/cartSlice";
+import PriceContainer from "../../../elements/containers/PriceContainer";
 
 export default function Cart() {
     const products = useSelector((store) => store.cart);
     const dispatch = useDispatch();
-    console.log(products);
 
     useEffect(() => {
         dispatch(updateTotalSumAndCountItem())
@@ -33,20 +33,17 @@ export default function Cart() {
             {products.items.length > 0 ?
                 <span className={style.cartWrapper}>
                     <div className={style.cartWithProducts}>
-                        {products.items.map(element => (
-                            <span className={style.product}>
-                                <img src={ROOT_URL + `${element.image}`} className={style.imgProduct}/>
+                        {products.items.map(product => (
+                            <span className={style.productContainer}>
+                                <img src={ROOT_URL + `${product.image}`} className={style.imgProduct}/>
                                 <span className={style.productWrapper}>
                                     <div className={style.counterInfo}>
-                                        <p className={style.productName}>{element.title}</p>
-                                        <div  className={style.cross} onClick={() => dispatch(deleteProduct(element.id))}>X</div>
+                                        <p className={style.productName}>{product.title.length > 46 ? product.title.slice(0, 44) + "..." : product.title}</p>
+                                        <div  className={style.cross} onClick={() => dispatch(deleteProduct(product.id))}>X</div>
                                     </div>
                                     <span className={style.priceContainer}>
-                                        <Counter number={element.quantity} id={element.id}/>
-                                        <span className={style.priceAndDiscount}>
-                                            <p className={style.price}>{element.discont_price ? `$${element.discont_price}` : `$${element.price}`}</p>
-                                            <p className={style.discontPrice}>{element.discont_price ? `$${element.price}` : ''}</p>
-                                        </span>
+                                        <Counter number={product.quantity} id={product.id}/>
+                                        <PriceContainer price={product.price} discount={product.discont_price} />
                                     </span>
                                 </span>
                             </span>
@@ -74,8 +71,4 @@ export default function Cart() {
             }
         </div>
     );
-}
-
-function discountPercentage(price, discount) {
-    return "-" + Math.round(Number(100 * (price - discount) /price))+"%"
 }
