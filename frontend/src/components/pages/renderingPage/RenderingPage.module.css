@@ -56,6 +56,10 @@
     transition: opacity 0.5s ease;
 }
 
+.addToCartBtn:hover {
+    background-color: black;
+}
+
 .productContainer:hover .addToCartBtn {
     transition: opacity 0.5s ease;
     opacity: 1;

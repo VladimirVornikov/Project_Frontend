@@ -9,6 +9,7 @@ import {ROOT_URL} from "../../..";
 import Counter from "../../../elements/containers/Counter";
 import { deleteProduct, updateTotalSumAndCountItem } from "../../../store/reducers/cartSlice";
 import PriceContainer from "../../../elements/containers/PriceContainer";
+import OrderDetails from "../../../elements/containers/OrderDetails";
 
 export default function Cart() {
     const products = useSelector((store) => store.cart);
@@ -49,15 +50,9 @@ export default function Cart() {
                             </span>
                         ))}
                     </div>
-
-                    <div className={style.orderDetails}>
-                            <h1>Order Details</h1>
-                            <h2>{products.countItem > 1 ? `${products.countItem} items` : `${products.countItem} item`}</h2>
-                            <div>
-                                <p>Total</p>
-                                <p>${products.totalSum}</p>
-                            </div>
-                    </div>
+                    
+                    <OrderDetails totalSum={products.totalSum} countItem={products.countItem}/>
+                    
                 </span>
             :
                 <>

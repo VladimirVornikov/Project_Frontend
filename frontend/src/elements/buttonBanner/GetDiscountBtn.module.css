@@ -10,3 +10,8 @@
     margin-top: 16px;
     cursor: pointer;
 }
+
+.getDiscountBtn:hover {
+    background-color: black;
+    color: white;
+}

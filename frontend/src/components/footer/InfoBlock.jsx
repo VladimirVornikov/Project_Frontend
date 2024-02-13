@@ -7,11 +7,14 @@ export default function InfoBlock(props) {
             <p className={style.title}>{props.title}</p>
             <p className={style.text}>{props.text}</p>
             
-            {/* Generate images if they are */}
             {props.images && (
                 <div className={style.socialMedia}>
                     {props.images.map((social, index) => (
-                        <img  className= {style.img} key={index} src={social} alt="No social image"/>
+                        <a href={index === 0 ? 
+                            "https://www.instagram.com/startainstitute/" : "https://t.me/Starta_Institute_By_TelRan"} 
+                            key={index} target="_blank">
+                            <img  className= {style.img} key={index} src={social} alt="No social image" href={"https://www.instagram.com/startainstitute/"}/>
+                        </a>
                     ))}
                 </div>
             )}

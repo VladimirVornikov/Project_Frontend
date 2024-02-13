@@ -26,6 +26,11 @@
     gap: 16px;
 }
 
-img {
+.img {
     cursor: pointer;
+}
+
+.img:hover {
+    transform: scale(1.2);
+    transition: transform 1s;
 }

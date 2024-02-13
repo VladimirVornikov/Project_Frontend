@@ -1,0 +1,40 @@
+.orderDetails {
+    background: rgba(241, 243, 244, 1);
+    width: 548px;
+    height: 582px;
+    border-radius: 10px;
+    padding: 32px;
+}
+
+.title {
+    font-size: 40px;
+    font-weight: 700;
+    font-family: "Montserrat", sans-serif;
+    line-height: 44px;
+    color: rgba(40, 40, 40, 1);
+    margin-bottom: 24px;
+}
+
+.infoAboutCart {
+    font-size: 40px;
+    font-weight: 700;
+    font-family: "Montserrat", sans-serif;
+    line-height: 52px;
+    color: rgba(139, 139, 139, 1);
+    margin-bottom: 18px;
+}
+
+.totalWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 32px;
+}
+
+.totalPrice {
+    font-size: 64px;
+    font-weight: 700;
+    font-family: "Montserrat", sans-serif;
+    line-height: 70.5px;
+    color: rgba(40, 40, 40, 1);
+}

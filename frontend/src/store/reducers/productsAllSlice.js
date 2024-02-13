@@ -25,7 +25,7 @@ const productsAll = createSlice ({
         },
         saleProduct(state, action) {
             const slicedArray = action.payload.filter((item) => item.discont_price).slice(0,4)
-            return {title: "Sale", products: [...slicedArray]}
+            return {title: "Sale", products: addIsShownProp(slicedArray)}
         },
         clearData() {
             return initialState

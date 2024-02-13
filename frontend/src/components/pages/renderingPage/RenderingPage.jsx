@@ -16,7 +16,6 @@ export default function RenderingPage(props) {
     const productsList = useSelector(store => store.allProducts)
     const {id} = useParams()
     const dispatch = useDispatch()
-    console.log(productsList);
 
     
     useEffect(() => {
@@ -37,13 +36,14 @@ export default function RenderingPage(props) {
         <div className={style.CategoryProducts}>
 
             {props.type === "Sale" 
-                ?   <span className={style.spanCategories}>
+                ?   
+                <span className={style.spanCategories}>
                         <Title title={productsList.title} />
                         <hr className={style.hr} />
                         <Link to="/allSales">
                             <ShowButton title={'All sales'}/>
                         </Link>
-                    </span> 
+                </span> 
                 :   <>
                     <Title title={productsList.title}/>
                     <FilterBar type={props.type}/> 

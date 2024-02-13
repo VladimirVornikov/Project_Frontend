@@ -75,13 +75,6 @@
 }
 
 
-.orderDetails {
-    background-color: red;
-    width: 548px;
-    height: 582px;
-    border-radius: 10px;
-}
-
 .cartWrapper{
     display: flex;
     gap: 32px;

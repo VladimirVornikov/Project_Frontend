@@ -17,11 +17,12 @@ export default function FilterBar({type}) {
     function handleSortedBox(e) {
         dispatch(filterBySort(e.target.value))
     }
+    console.log(priceFrom, priceTo);
 
 
     useEffect(() => {
         dispatch(refreshList())
-        dispatch(filterByInput({priceFrom, priceTo}))
+        dispatch(filterByInput({priceFrom, priceTo: priceTo || 200}))
     }, [priceFrom, priceTo, dispatch])
 
     return (
@@ -34,9 +35,9 @@ export default function FilterBar({type}) {
                     name="price_from" 
                     type="number" 
                     placeholder="from" />
-                <input className={style.inputRange}
+                <input className={priceTo > priceFrom || !priceTo ? style.inputRange : style.inputRangeError}
                     value={priceTo}
-                    onChange={(e) =>  setTo(e.target.value) }
+                    onChange={(e) =>  e.target.value >= 0 && e.target.value <=999 ? setTo(e.target.value) : priceTo}
                     name="price_to" 
                     type="number" 
                     placeholder='to' ></input>
