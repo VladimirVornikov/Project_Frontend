@@ -4,8 +4,8 @@ import { useDispatch } from 'react-redux'
 import { filterByInput, filterBySale, filterBySort} from '../../store/reducers/productsAllSlice'
 
 export default function FilterBar({type}) {
-    const [priceFrom, setFrom] = useState()
-    const [priceTo, setTo] = useState()
+    const [priceFrom, setFrom] = useState(0)
+    const [priceTo, setTo] = useState(0)
 
 
     const dispatch = useDispatch()

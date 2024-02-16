@@ -27,23 +27,22 @@ export default function Breadcrumbs() {
     const site = ["categories", "/", "allSales", "allProducts"]
     const crumbs = changeIndexToName(location.pathname.split('/').slice(1))
     
-
     if(site.some(category => crumbs.includes(category))) {
         return (
-          <div className={style.BreadcrumbsContainer}>
-            <Link to={"/"}>
-                <button className={style.BreadcrumbsBtn}>Main page</button>
-            </Link>
-            {crumbs.map((crum, index) => (
-                
-                <Link to={`/${crum}`}>
-                    <div className={style.line}/>
-                    <button key={index}  className={index === crumbs.length - 1 ? style.BreadcrumbsBtnLast : style.BreadcrumbsBtn}>
-                        {crum.charAt(0).toUpperCase().concat(crum.slice(1))}
-                    </button>
+            <div className={style.BreadcrumbsContainer}>
+                <Link to={"/"}>
+                    <button className={style.BreadcrumbsBtn}>Main page</button>
                 </Link>
-            ))}
-          </div>
+                {crumbs.map((crum, index) => (
+                    
+                    <Link key={index} to={`/${crum}`}>
+                        <div  className={style.line}/>
+                        <button key={index}  className={index === crumbs.length - 1 ? style.BreadcrumbsBtnLast : style.BreadcrumbsBtn}>
+                            {crum.charAt(0).toUpperCase().concat(crum.slice(1))}
+                        </button>
+                    </Link>
+                ))}
+            </div>
         )
     }
 

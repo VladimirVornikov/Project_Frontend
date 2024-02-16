@@ -7,13 +7,9 @@ export default function Map() {
                 <iframe
                     width="1360"
                     height="350"
-                    frameborder="0"
-                    scrolling="no"
-                    marginheight="0"
-                    marginwidth="0"
+                    frameBorder="0"
                     src="https://maps.google.com/maps?width=1360&amp;height=350&amp;hl=en&amp;q=Linkstrasse%202,%208%20OG,%2010785,%20Berlin,%20Deutschland+(TelRan)&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
                 >
-                    
                 </iframe>
             </div>
         </div>

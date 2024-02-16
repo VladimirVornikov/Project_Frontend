@@ -33,14 +33,12 @@
     font-size: 20px;
     width: 252px;
     font-weight: 500;
-    font-family: "Montserrat", sans-serif;
     line-height: 26px;
     color:rgba(40, 40, 40, 1);
     margin: 0 32px 16px 32px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-
 }
 
 .addToCartBtn, .addToCartBtnActive {
@@ -49,7 +47,6 @@
     border-radius: 5px;
     font-size: 20px;
     font-weight: 600;
-    font-family: "Montserrat", sans-serif;
     cursor: pointer;
     background-color: green;
     width: 284px;
@@ -69,6 +66,7 @@
     color: black;
     background-color: white;
 }
+
 .productContainer:hover .addToCartBtn {
     transition: opacity 0.5s ease;
     opacity: 1;

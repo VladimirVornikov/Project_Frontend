@@ -35,11 +35,11 @@ export default function Cart() {
                 <span className={style.cartWrapper}>
                     <div className={style.cartWithProducts}>
                         {products.items.map(product => (
-                            <span className={style.productContainer}>
+                            <span key={product.id} className={style.productContainer}>
                                 <img src={ROOT_URL + `${product.image}`} className={style.imgProduct}/>
                                 <span className={style.productWrapper}>
                                     <div className={style.counterInfo}>
-                                        <p className={style.productName}>{product.title.length > 46 ? product.title.slice(0, 44) + "..." : product.title}</p>
+                                        <p className={style.productName}>{product.title}</p>
                                         <div  className={style.cross} onClick={() => dispatch(deleteProduct(product.id))}>X</div>
                                     </div>
                                     <span className={style.priceContainer}>

@@ -3,15 +3,14 @@
     margin-top: 40px;
     width: 1360px;
 }
+
 .cartInfo {
     font-size: 20px;
     font-weight: 500;
-    font-family: "Montserrat", sans-serif;
     line-height: 26px;
     color: rgba(40, 40, 40, 1);
     margin-bottom: 32px;
 }
-
 
 .spanCart {
     display: flex;
@@ -33,7 +32,6 @@
     display: flex;
     margin-bottom: 16px;
     gap: 32px;
-
 }
 
 .imgProduct {
@@ -44,7 +42,6 @@
     object-fit: cover;
     object-position: 100%;
 }
-
 
 .productWrapper{ 
     display: flex;
@@ -74,7 +71,6 @@
     align-items: baseline;
 }
 
-
 .cartWrapper{
     display: flex;
     gap: 32px;
@@ -92,7 +88,10 @@
 .productName {
     font-size: 20px;
     font-weight: 500;
-    font-family: "Montserrat", sans-serif;
     line-height: 28px;
     color: rgba(40, 40, 40, 1);
+    width: 476px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }

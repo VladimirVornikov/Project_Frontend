@@ -9,7 +9,6 @@
 .title {
     font-size: 40px;
     font-weight: 700;
-    font-family: "Montserrat", sans-serif;
     line-height: 44px;
     color: rgba(40, 40, 40, 1);
     margin-bottom: 24px;
@@ -18,7 +17,6 @@
 .infoAboutCart {
     font-size: 40px;
     font-weight: 700;
-    font-family: "Montserrat", sans-serif;
     line-height: 52px;
     color: rgba(139, 139, 139, 1);
     margin-bottom: 18px;
@@ -34,7 +32,6 @@
 .totalPrice {
     font-size: 64px;
     font-weight: 700;
-    font-family: "Montserrat", sans-serif;
     line-height: 70.5px;
     color: rgba(40, 40, 40, 1);
 }

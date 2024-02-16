@@ -15,19 +15,12 @@ export default function Header() {
                 <img src={Logo} alt="No image" className={style.logo} />
             </Link>
             <nav className={style.navBar}>
-                <Link to={"/"}>
-                    <a>Main page</a>
-                </Link>
-                <Link to={'/categories'}>
-                    <a>Categories</a>
-                </Link>
-                <Link to={"/allProducts"}>
-                    <a>All products</a>
-                </Link>
-                <Link to={"/allSales"}>
-                    <a>All sales</a>
-                </Link>
+                <Link to={"/"}>Main page</Link>
+                <Link to={'/categories'}>Categorie</Link>
+                <Link to={"/allProducts"}>All product</Link>
+                <Link to={"/allSales"}>All sale</Link>
             </nav>
+            
             <Link to={"/cart"} className={style.basketContainer} >
                 {itemsNumber > 0 ? <p className={style.itemsInBasket}>{itemsNumber}</p> : ''}
                 <img src={Basket} alt="No image" className={style.basket}/>
