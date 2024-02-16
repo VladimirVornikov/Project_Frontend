@@ -39,7 +39,7 @@
 
 }
 
-.addToCartBtn {
+.addToCartBtn, .addToCartBtnActive {
     height: 58px;
     color: rgba(255, 255, 255, 1);
     border-radius: 5px;
@@ -60,6 +60,11 @@
     background-color: black;
 }
 
+.addToCartBtnActive:hover {
+    opacity: 1;
+    color: black;
+    background-color: white;
+}
 .productContainer:hover .addToCartBtn {
     transition: opacity 0.5s ease;
     opacity: 1;

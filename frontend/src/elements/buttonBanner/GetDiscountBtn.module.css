@@ -1,4 +1,4 @@
-.getDiscountBtn {
+.getDiscountBtn, .getDiscountBtnActive {
     width: 518px;
     height: 58px;
     border-radius: 5px;
@@ -14,4 +14,8 @@
 .getDiscountBtn:hover {
     background-color: black;
     color: white;
+}
+
+.getDiscountBtnActive {
+    color: green;
 }

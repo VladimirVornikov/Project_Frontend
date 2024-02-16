@@ -1,5 +1,6 @@
 import React from 'react'
 import style from "./OrderDetails.module.css"
+import Form from './Form';
 
 export default function OrderDetails(props) {
     const {totalSum, countItem} = props;
@@ -11,6 +12,7 @@ export default function OrderDetails(props) {
                 <p className={style.infoAboutCart}>Total</p>
                 <p className={style.totalPrice}>${totalSum}</p>
             </div>
+            <Form type={"orderDetails"}/>
         </div>
     )
 }

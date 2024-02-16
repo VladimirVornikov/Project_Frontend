@@ -1,4 +1,4 @@
-.input {
+.inputGetdiscount, .inputOrders {
     width: 516px;
     height: 58px;
     border: 1px solid white;
@@ -11,6 +11,10 @@
     padding-left: 32px;
     
 }
-.input::placeholder {
+.inputGetdiscount::placeholder {
     color: rgba(255, 255, 255, 1);
+}
+
+.inputOrders {
+    width: 400px;
 }

@@ -15,13 +15,6 @@
     padding-top: 32px;
 }
 
-.form {
-    margin-top: 32px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
 .GetDiscountMain {
     display: flex;
     margin-top: 16px;

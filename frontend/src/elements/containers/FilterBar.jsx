@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import style from './FilterBar.module.css'
 import { useDispatch } from 'react-redux'
-import { filterByInput, filterBySale, filterBySort, refreshList } from '../../store/reducers/productsAllSlice'
+import { filterByInput, filterBySale, filterBySort} from '../../store/reducers/productsAllSlice'
 
 export default function FilterBar({type}) {
     const [priceFrom, setFrom] = useState()
@@ -17,11 +17,13 @@ export default function FilterBar({type}) {
     function handleSortedBox(e) {
         dispatch(filterBySort(e.target.value))
     }
-    console.log(priceFrom, priceTo);
-
 
     useEffect(() => {
-        dispatch(refreshList())
+        setFrom('')
+        setTo('')
+    }, [type])
+
+    useEffect(() => {
         dispatch(filterByInput({priceFrom, priceTo: priceTo || 200}))
     }, [priceFrom, priceTo, dispatch])
 
@@ -31,13 +33,13 @@ export default function FilterBar({type}) {
                 <label htmlFor="price_from" >Price</label>
                 <input  className={style.inputRange} 
                     value={priceFrom} 
-                    onChange={(e) => e.target.value >= 0 && e.target.value <= 999 ? setFrom(e.target.value) : priceFrom}
+                    onChange={(e) => e.target.value >= 0 && e.target.value <= 999 ? setFrom(+e.target.value) : priceFrom}
                     name="price_from" 
                     type="number" 
                     placeholder="from" />
-                <input className={priceTo > priceFrom || !priceTo ? style.inputRange : style.inputRangeError}
+                <input className={priceTo < priceFrom || priceTo === undefined ? style.inputRangeError : style.inputRange }
                     value={priceTo}
-                    onChange={(e) =>  e.target.value >= 0 && e.target.value <=999 ? setTo(e.target.value) : priceTo}
+                    onChange={(e) =>  e.target.value >= 0 && e.target.value <=999 ? setTo(+e.target.value) : priceTo}
                     name="price_to" 
                     type="number" 
                     placeholder='to' ></input>

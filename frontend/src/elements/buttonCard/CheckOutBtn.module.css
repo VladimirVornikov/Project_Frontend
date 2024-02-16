@@ -13,3 +13,7 @@
     background-color:   black;
 }
 
+.checkOutButton:active {
+    background-color: white;
+    color: black;
+}

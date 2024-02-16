@@ -90,8 +90,9 @@ const productsAll = createSlice ({
             
         },
         filterByInput(state, action) {
+            const refreshedArray = addIsShownProp(state.products)
             if (action.payload) {
-                const updatedProducts = state.products.map(product => {
+                const updatedProducts = refreshedArray.map(product => {
                     const productPrice = product.discont_price || product.price;
                     if (productPrice < action.payload.priceFrom || productPrice > action.payload.priceTo) {
                         return { ...product, isShown: false };
@@ -105,16 +106,7 @@ const productsAll = createSlice ({
                 };
             }
         },
-        refreshList(state) {
-            return {
-                ...state,
-                products: addIsShownProp(state.products),
-            }
-        }
-        
-        
-        
-        
+
     }
 })
 
