@@ -14,6 +14,9 @@ const cart = createSlice({
             const productExists = state.items.findIndex(product => product.id === action.payload.id);
             if (productExists !== -1) {
                 state.items[productExists].quantity += action.payload.quantity;
+                if (state.items[productExists].quantity > 100) {
+                    state.items[productExists].quantity = 100
+                }
             } else {
                 state.items.push({ ...action.payload });
             }
@@ -65,7 +68,6 @@ const cart = createSlice({
         },
     },
 });
-
 
 export default cart.reducer;
 export const { addProduct, incrCart, decrCart, setCart, deleteProduct, updateTotalSumAndCountItem } = cart.actions;

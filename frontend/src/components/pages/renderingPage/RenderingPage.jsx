@@ -36,7 +36,7 @@ export default function RenderingPage(props) {
         setActive(true);
         setTimeout(() => {
             setActive(false)
-        }, 1000)
+        }, 200)
     } 
 
     return (
@@ -63,8 +63,12 @@ export default function RenderingPage(props) {
                             <Link to={`/categories/${id ? id : product.categoryId}/${product.id}`}>
                                 <img src={ROOT_URL + product.image} className={style.img}/>
                             </Link>
-                            <button onClick={() => {addItemToCart(product); buttonActiveHandle()}} className={buttonActive ? style.addToCartBtnActive : style.addToCartBtn}>{buttonActive ? "Added" : "Add to Cart"}</button>
-                            <p className={style.name}>{product.title.length > 21 ? product.title.slice(0, 18) + "..." : product.title}</p>
+                            <button onClick={() => {addItemToCart(product); buttonActiveHandle()}}
+                                    key={product.id}
+                                    className={buttonActive ? style.addToCartBtnActive : style.addToCartBtn}>
+                                    {buttonActive ? "Added" : "Add to Cart"}
+                            </button>
+                            <p className={style.name}>{product.title}</p>
                             <PriceContainer price={product.price} discount={product.discont_price} isAllPageList={true}/>
                         </div>
                     : ''
