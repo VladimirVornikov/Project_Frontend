@@ -15,7 +15,7 @@ export default function Cart() {
     const products = useSelector((store) => store.cart);
     const dispatch = useDispatch();
 
-    console.log(products);
+    console.log(products.items);
 
     useEffect(() => {
         dispatch(updateTotalSumAndCountItem())

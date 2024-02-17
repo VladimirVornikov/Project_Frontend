@@ -3,6 +3,7 @@
     height: 128px;
     display: flex;
     border-bottom: 1px solid rgba(221, 221, 221, 1);
+    margin-bottom: 40px;
 }
 
 .logo {
@@ -41,7 +42,7 @@ a {
     height: 48px;
 }
 
-.itemsInBasket {
+.itemsInBasket, .itemsInBasketDiscount {
     background-color: green;
     width: 26px;
     height: 26px;
@@ -54,6 +55,10 @@ a {
     line-height: 26px;
 }
 
+.itemsInBasketDiscount {
+    background-color: yellow;
+    color: red;
+}
 a:hover{
     text-decoration: underline;
     color: rgba(51, 153, 51, 1);

@@ -6,7 +6,7 @@ import {Link} from 'react-router-dom'
 import { useSelector } from "react-redux";
 
 export default function Header() {
-    const itemsNumber = useSelector(store => store.cart.countItem)
+    const itemsNumber = useSelector(store => store.cart)
 
     return (
         <div className={style.headerMain}>
@@ -21,7 +21,12 @@ export default function Header() {
             </nav>
             
             <Link to={"/cart"} className={style.basketContainer} >
-                {itemsNumber > 0 ? <p className={style.itemsInBasket}>{itemsNumber}</p> : ''}
+                {itemsNumber.countItem > 0 
+                    ? 
+                    <p className={itemsNumber.discountFactor < 1 
+                    ?  style.itemsInBasketDiscount : style.itemsInBasket}>
+                        {itemsNumber.countItem}</p> 
+                    : ''}
                 <img src={Basket} alt="No image" className={style.basket}/>
             </Link>
         </div>

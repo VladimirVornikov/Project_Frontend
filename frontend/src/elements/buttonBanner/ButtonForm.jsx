@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import style from './ButtonForm.module.css';
 import Modal from '../containers/Modal';
 import { useDispatch } from 'react-redux';
-import { getDiscount, sendingGoodsToServer } from '../../store/reducers/cartSlice';
+import { getDiscount, sendItemsToServer, } from '../../store/reducers/cartSlice';
 
 export default function ButtonForm({ type, usersInfo, setReset }) {
     const [active, setActive] = useState(false);
@@ -27,11 +27,9 @@ export default function ButtonForm({ type, usersInfo, setReset }) {
         setModalOpen(false);
         if(type === "OrdersDetails") {
             localStorage.clear();
-            dispatch(sendingGoodsToServer())
+            dispatch(sendItemsToServer())
         }
     }
-
-
 
     return (
         <>

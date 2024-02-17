@@ -74,12 +74,12 @@ const cart = createSlice({
                 discountFactor : 0.95
             }
         },
-        sendingGoodsToServer(state) {
+        sendItemsToServer(state) {
             return initialState
         }
     },
 });
 
 export default cart.reducer;
-export const { addProduct, incrCart, decrCart, setCart, deleteProduct, updateTotalSumAndCountItem, getDiscount, sendingGoodsToServer } = cart.actions;
+export const { addProduct, incrCart, decrCart, setCart, deleteProduct, updateTotalSumAndCountItem, getDiscount, sendItemsToServer} = cart.actions;
 
