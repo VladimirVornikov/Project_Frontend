@@ -15,6 +15,8 @@ export default function Cart() {
     const products = useSelector((store) => store.cart);
     const dispatch = useDispatch();
 
+    console.log(products);
+
     useEffect(() => {
         dispatch(updateTotalSumAndCountItem())
     }, [products])
@@ -51,7 +53,7 @@ export default function Cart() {
                         ))}
                     </div>
                     
-                    <OrderDetails totalSum={products.totalSum} countItem={products.countItem}/>
+                    <OrderDetails totalSum={products.totalSum} countItem={products.countItem} discountFactor={products.discountFactor}/>
                     
                 </span>
             :

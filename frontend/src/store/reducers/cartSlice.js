@@ -4,6 +4,7 @@ const initialState = {
     items: [],
     totalSum: 0,
     countItem: 0,
+    discountFactor: 1,
 };
 
 const cart = createSlice({
@@ -66,9 +67,19 @@ const cart = createSlice({
             state.countItem = state.items.reduce((accumulator, currentItem) =>
                 accumulator + currentItem.quantity, 0);
         },
+
+        getDiscount(state) {
+            return {
+                ...state,
+                discountFactor : 0.95
+            }
+        },
+        sendingGoodsToServer(state) {
+            return initialState
+        }
     },
 });
 
 export default cart.reducer;
-export const { addProduct, incrCart, decrCart, setCart, deleteProduct, updateTotalSumAndCountItem } = cart.actions;
+export const { addProduct, incrCart, decrCart, setCart, deleteProduct, updateTotalSumAndCountItem, getDiscount, sendingGoodsToServer } = cart.actions;
 

@@ -11,7 +11,6 @@ export default function Form(props) {
     const access = [userName, userPhone, userEmail]
 
     const [reset, setResetInput] = useState(false)
-    console.log(reset);
 
     return (
         <form className={style.form}>
