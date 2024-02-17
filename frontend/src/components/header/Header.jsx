@@ -3,8 +3,7 @@ import Logo from "../../elements/images/logo.png";
 import Basket from "../../elements/images/basket=empty.png";
 import style from "./Header.module.css";
 import {Link} from 'react-router-dom' 
-import { useDispatch, useSelector } from "react-redux";
-import { updateTotalSumAndCountItem } from "../../store/reducers/cartSlice";
+import { useSelector } from "react-redux";
 
 export default function Header() {
     const itemsNumber = useSelector(store => store.cart.countItem)
@@ -16,7 +15,7 @@ export default function Header() {
             </Link>
             <nav className={style.navBar}>
                 <Link to={"/"}>Main page</Link>
-                <Link to={'/categories'}>Categorie</Link>
+                <Link to={'/categories'}>Categories</Link>
                 <Link to={"/allProducts"}>All product</Link>
                 <Link to={"/allSales"}>All sale</Link>
             </nav>

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import style from './GetDiscountBtn.module.css'
+import style from './ButtonForm.module.css'
 
-export default function GetDiscountBtn({type}) {
+export default function ButtonForm({type}) {
     const [active, setActive] = useState(false)
     function handleActiveButton(e) {
         e.preventDefault()
@@ -12,9 +12,9 @@ export default function GetDiscountBtn({type}) {
         <button 
             onClick={handleActiveButton}
             className={
-                type === "Orders" ? style.orderButton :
+                type === "OrdersDetails" ? style.orderButton : 
                 active ? style.getDiscountBtnActive : style.getDiscountBtn}>
-                {type === "Orders" ? "Order" :
+                {type === "OrdersDetails" ? "Order" :
                 active ? "Request Submitted" : "Get a discount"} 
         </button>
     )

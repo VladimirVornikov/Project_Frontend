@@ -12,7 +12,7 @@ export default function OrderDetails(props) {
                 <p className={style.infoAboutCart}>Total</p>
                 <p className={style.totalPrice}>${totalSum}</p>
             </div>
-            <Form type={"orderDetails"}/>
+            <Form type={"OrdersDetails"}/>
         </div>
     )
 }

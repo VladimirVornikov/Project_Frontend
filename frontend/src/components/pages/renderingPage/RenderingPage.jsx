@@ -1,4 +1,4 @@
-import { fetchAllProducts, fetchAllSales, fetchCategory, fetchSale } from '../../../store/asyncAction/fetchCategories';
+import { fetchCategory, fetchData } from '../../../store/asyncAction/fetchCategories';
 import ShowButton from '../../../elements/buttonCard/ShowButton';
 import FilterBar from '../../../elements/containers/FilterBar';
 import { useDispatch, useSelector } from 'react-redux';
@@ -15,14 +15,14 @@ export default function RenderingPage(props) {
     const [buttonActive, setActive] = useState(false)
     const productsList = useSelector(store => store.allProducts)
     const {id} = useParams()
+    console.log();
     const dispatch = useDispatch()
 
-    
     useEffect(() => {
-        dispatch(props.type === "Sales" ? fetchAllSales() :
+        dispatch(props.type === "Sales" ? fetchData("allSales") :
                 props.type === "CategoryProducts" ? fetchCategory(id) :
-                props.type === "Sale" ? fetchSale() :
-                fetchAllProducts())
+                props.type === "Sale" ? fetchData("saleProduct") :
+                fetchData("productsAllList"))
         return () => { dispatch(clearData());};
     }, [id, props.type, dispatch])
 

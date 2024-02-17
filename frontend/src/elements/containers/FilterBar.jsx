@@ -6,6 +6,7 @@ import { filterByInput, filterBySale, filterBySort} from '../../store/reducers/p
 export default function FilterBar({type}) {
     const [priceFrom, setFrom] = useState(0)
     const [priceTo, setTo] = useState(0)
+    const [selectedSort, setSelectedSort] = useState('')
 
 
     const dispatch = useDispatch()
@@ -16,12 +17,15 @@ export default function FilterBar({type}) {
 
     function handleSortedBox(e) {
         dispatch(filterBySort(e.target.value))
+        setSelectedSort(e.target.value);
     }
 
+
     useEffect(() => {
-        setFrom('')
-        setTo('')
-    }, [type])
+        setFrom('');
+        setTo('');
+        setSelectedSort('');
+    }, [type]);
 
     useEffect(() => {
         dispatch(filterByInput({priceFrom, priceTo: priceTo || 200}))
@@ -54,7 +58,7 @@ export default function FilterBar({type}) {
 
             <span className={style.span}>
                 <label htmlFor="sort_category">Sorted</label>
-                <select className={style.select} name="sort_category" onChange={handleSortedBox}>
+                <select className={style.select} name="sort_category" onChange={handleSortedBox} value={selectedSort}>
                     <option value="">by default</option>
                     <option value="A-Z">A-Z</option>
                     <option value="Z-A">Z-A</option>

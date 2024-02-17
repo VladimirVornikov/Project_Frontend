@@ -3,8 +3,6 @@ import { asyncCategoriesList } from "../reducers/categoriesSlice"
 import { allSales, categoryProduct, productsAllList, saleProduct } from "../reducers/productsAllSlice"
 import { product } from "../reducers/productSlice"
 
-
-
 export function fetchCategoriesList() {
     return function(dispatch) {
         fetch(ROOT_URL + "/categories/all")
@@ -21,30 +19,6 @@ export function fetchCategory(id) {
     }
 }
 
-export function fetchAllProducts() {
-    return function(dispatch) {
-        fetch(ROOT_URL + "/products/all")
-            .then(result => result.json())
-            .then(data => dispatch(productsAllList(data)))
-    }
-}
-
-export function fetchAllSales() {
-    return function(dispatch) {
-        fetch(ROOT_URL + "/products/all")
-            .then(result => result.json())
-            .then(data => dispatch(allSales(data)))
-    }
-}
-
-export function fetchSale() {
-    return function(dispatch) {
-        fetch(ROOT_URL + "/products/all")
-            .then(result => result.json())
-            .then(data => dispatch(saleProduct(data)))
-    }
-}
-
 export function fetchProduct(id) {
     return function(dispatch) {
         fetch(ROOT_URL + "/products/" + id)
@@ -52,4 +26,20 @@ export function fetchProduct(id) {
             .then(data => dispatch(product(data)))
     }
 }
-
+export function fetchData(type) {
+    return function(dispatch) {
+        fetch(ROOT_URL + "/products/all")
+            .then(result => result.json())
+            .then(data => {
+                switch (type) {
+                    case "productsAllList":
+                        return dispatch(productsAllList(data))
+                    case "allSales":
+                        return dispatch(allSales(data))
+                    case "saleProduct":
+                        return dispatch(saleProduct(data))
+                }
+            })
+        
+    }
+}

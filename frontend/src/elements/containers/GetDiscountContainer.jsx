@@ -9,7 +9,7 @@ const GetDiscountContainer = forwardRef((props, ref) => {
             <h1 className={style.title}>5% off on the first order</h1>
             <div className={style.GetDiscountMain}>
                 <img src={HandImage} alt="No image" />
-                <Form type={"getDiscount"}/>
+                <Form type={'getDiscount'}/>
             </div>
         </div>
     );

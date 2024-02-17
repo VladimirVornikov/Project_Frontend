@@ -9,6 +9,14 @@ function addIsShownProp(array) {
     return array.map(product => ({...product, isShown: true}))
 }
 
+const sortProducts = (products, order) => {
+    return products.slice().sort((a, b) => {
+        const priceA = a.discont_price || a.price;
+        const priceB = b.discont_price || b.price;
+        return order === 'high-low' ? priceB - priceA : priceA - priceB;
+    });
+};
+
 const productsAll = createSlice ({
     name: "allProducts",
     initialState,
@@ -54,40 +62,31 @@ const productsAll = createSlice ({
         filterBySort(state, action) {
             switch (action.payload) {
                 case "high-low":
-                    const highLow = state.products.slice().sort((a, b) => {
-                        const priceA = a.discont_price || a.price;
-                        const priceB = b.discont_price || b.price; 
-                        return priceB - priceA;
-                    });
                     return {
                         ...state,
-                        products: highLow,
+                        products: sortProducts(state.products, 'high-low'),
                     };
-                case "low-high": 
-                    const lowHigh = state.products.slice().sort((a, b) => {
-                        const priceA = a.discont_price || a.price;
-                        const priceB = b.discont_price || b.price; 
-                        return priceA - priceB;
-                    });
+                case "low-high":
                     return {
                         ...state,
-                        products: lowHigh
-                    }
+                        products: sortProducts(state.products, 'low-high'),
+                    };
                 case "A-Z": 
                     return {
                         ...state,
                         products: state.products.slice().sort((a, b) =>  a.title.localeCompare(b.title)),
-                    }
+                    };
                 case "Z-A": 
                     return {
                         ...state,
                         products: state.products.slice().sort((a, b) =>  b.title.localeCompare(a.title)),
-                    }
-                    
+                    };
                 default:
-                    return state;
+                    return {
+                        ...state,
+                        products: addIsShownProp(state.products),
+                    };
             }
-            
         },
         filterByInput(state, action) {
             const refreshedArray = addIsShownProp(state.products)

@@ -17,14 +17,13 @@ function changeIndexToName(array) {
             array[i] = listName[index];
         }
     }
-
     return array;
 }
 
 export default function Breadcrumbs() {
 
     const location = useLocation();
-    const site = ["categories", "/", "allSales", "allProducts"]
+    const site = ["categories", "/", "allSale", "allProduct"]
     const crumbs = changeIndexToName(location.pathname.split('/').slice(1))
     
     if(site.some(category => crumbs.includes(category))) {
@@ -34,7 +33,6 @@ export default function Breadcrumbs() {
                     <button className={style.BreadcrumbsBtn}>Main page</button>
                 </Link>
                 {crumbs.map((crum, index) => (
-                    
                     <Link key={index} to={`/${crum}`}>
                         <div  className={style.line}/>
                         <button key={index}  className={index === crumbs.length - 1 ? style.BreadcrumbsBtnLast : style.BreadcrumbsBtn}>
