@@ -15,5 +15,10 @@
 }
 
 .inputOrders {
-    width: 400px;
+    width: 484px;
+    background-color: white;
+}
+
+.inputOrders::placeholder {
+    color: rgba(139, 139, 139, 1);
 }

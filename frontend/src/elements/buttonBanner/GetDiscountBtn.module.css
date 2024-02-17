@@ -1,4 +1,4 @@
-.getDiscountBtn, .getDiscountBtnActive {
+.getDiscountBtn, .getDiscountBtnActive, .orderButton {
     width: 518px;
     height: 58px;
     border-radius: 5px;
@@ -17,4 +17,18 @@
 
 .getDiscountBtnActive {
     color: green;
+}
+.orderButton {
+    color: white;
+    width: 484px;
+    background-color: rgba(51, 153, 51, 1);
+}
+
+.orderButton:hover {
+    background-color: black;
+}
+
+.orderButton:active {
+    background-color: white;
+    color: black;
 }
