@@ -2,9 +2,15 @@ import React from 'react'
 import style from "./Modal.module.css"
 
 export default function Modal({ onClose }) {
+    function handleClose(e) {
+        if (e.target.classList.contains(style.modalOverlay)) {
+            onClose();
+        }
+    }
+
     return (
-        <div className={style.modalOverlay}>
-            <div className={style.modalContent}>
+        <div  onClick={handleClose} className={style.modalOverlay}>
+            <div className={style.modalContent} >
                 <span className={style.info}>
                     <h1 className={style.title}>Congratulations!</h1>
                     <p className={style.cross} onClick={onClose}>x</p>

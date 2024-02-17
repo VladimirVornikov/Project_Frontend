@@ -10,8 +10,8 @@
     align-items: center;
 }
 
-
 .modalContent {
+    width: 548px;
     background-color: green;
     padding: 32px;
     border-radius: 10px;
@@ -51,5 +51,5 @@
     font-size: 20px;
     line-height: 22px;
     color: rgba(255, 255, 255, 1);
-
+    width: 424px;
 }

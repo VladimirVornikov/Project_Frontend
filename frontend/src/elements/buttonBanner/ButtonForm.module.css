@@ -8,6 +8,7 @@
     color: rgba(40, 40, 40, 1);
     margin-top: 16px;
     cursor: pointer;
+    margin-bottom: 32px;
 }
 
 .getDiscountBtn:hover {
@@ -21,6 +22,7 @@
 .orderButton {
     color: white;
     width: 484px;
+    margin-bottom: 32px;
     background-color: rgba(51, 153, 51, 1);
 }
 
