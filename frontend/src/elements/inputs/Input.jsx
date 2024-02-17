@@ -1,22 +1,35 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import style from "./Input.module.css";
 
 export default function Input(props) {
-    const { placeholder, type, id, name, inputType} = props;
+    const { placeholder, type, id, name, inputType, setConfig, resetInput} = props;
 
     const [value, setValue] = useState("");
     const [error, setError] = useState("");
 
+
+    useEffect(() => {
+        if (resetInput) {
+            setValue("");
+        }
+    }, [resetInput]);
+
     const validateInput = (inputValue) => {
         switch (type) {
             case 'text':
-                return inputValue.length > 3 && inputValue.length < 12;
+                if(inputValue.length > 3 && inputValue.length < 12 ) {
+                    return [inputValue, setConfig(true)]
+                };
                 case "tel":
                     const telephonePattern = /^\+?\d{10,13}$/;
-                    return telephonePattern.test(inputValue);
+                    if(telephonePattern.test(inputValue)) {
+                        return [inputValue, setConfig(true)]
+                    };
             case "email":
                 const emailPattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-                return emailPattern.test(inputValue);
+                if(emailPattern.test(inputValue)) {
+                    return [inputValue, setConfig(true)]
+                };
             default:
                 return false;
         }
@@ -30,8 +43,8 @@ export default function Input(props) {
             setError("This field is required");
         } else if (!validateInput(inputValue)) {
             type === "text" ? setError(`Invalid ${type} (Please, write your name)`) :
-            type === "tel" ? setError(`Invalid ${type} (It should contais "+" and 10 - 13 digits)`) :
-            setError(`Invalid ${type} (Your email, should contains "@mail" word)`)
+            type === "tel" ? setError(`Invalid ${type} (It should contain "+" and 10 - 13 digits)`) :
+            setError(`Invalid ${type} (Your email, should contain "@mail" word)`)
         } else {
             setError("");
         }
