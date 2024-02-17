@@ -4,3 +4,9 @@
     flex-direction: column;
     gap: 15px;
 }
+
+.errorField {
+    color: red;
+    text-decoration: underline;
+    font-size: 12px;
+}
