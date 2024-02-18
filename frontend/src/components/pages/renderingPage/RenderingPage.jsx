@@ -47,7 +47,7 @@ export default function RenderingPage(props) {
                 <span className={style.spanCategories}>
                         <Title title={productsList.title} />
                         <hr className={style.hr} />
-                        <Link to="/allSales">
+                        <Link to="/AllSales">
                             <ShowButton title={'All sales'}/>
                         </Link>
                 </span> 
@@ -60,7 +60,7 @@ export default function RenderingPage(props) {
                 {productsList.products.map(product => product.isShown === true 
                     ?
                         <div key={product.id} className={style.productContainer}>
-                            <Link to={`/categories/${id ? id : product.categoryId}/${product.id}`}>
+                            <Link to={`/Categories/${id ? id : product.categoryId}/${product.id}`}>
                                 <img src={ROOT_URL + product.image} className={style.img}/>
                             </Link>
                             <button onClick={() => {addItemToCart(product); buttonActiveHandle()}}

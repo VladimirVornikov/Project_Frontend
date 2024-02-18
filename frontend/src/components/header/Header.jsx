@@ -15,12 +15,12 @@ export default function Header() {
             </Link>
             <nav className={style.navBar}>
                 <Link to={"/"}>Main page</Link>
-                <Link to={'/categories'}>Categories</Link>
-                <Link to={"/allProducts"}>All product</Link>
-                <Link to={"/allSales"}>All sale</Link>
+                <Link to={'/Categories'}>Categories</Link>
+                <Link to={"/AllProducts"}>All product</Link>
+                <Link to={"/AllSales"}>All sale</Link>
             </nav>
             
-            <Link to={"/cart"} className={style.basketContainer} >
+            <Link to={"/Cart"} className={style.basketContainer} >
                 {itemsNumber.countItem > 0 
                     ? 
                     <p className={itemsNumber.discountFactor < 1 

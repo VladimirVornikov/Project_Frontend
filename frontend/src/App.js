@@ -17,13 +17,13 @@ function App() {
                 <Breadcrumbs/>
                 <Routes>
                     <Route path="/" element={<Home/>}/>
-                    <Route path="/categories" element={<Categories/>}/>
-                    <Route path="/categories/:id" element={<RenderingPage type={"CategoryProducts"}/>}/>
-                    <Route path="/categories/:id/:id" element={<Product/>}/>
-                    <Route path="/allProducts" element={<RenderingPage/>}/>
-                    <Route path="/allSales" element={<RenderingPage type={"Sales"}/>}/>
+                    <Route path="/Categories" element={<Categories/>}/>
+                    <Route path="/Categories/:id" element={<RenderingPage type={"CategoryProducts"}/>}/>
+                    <Route path="/Categories/:id/:id" element={<Product/>}/>
+                    <Route path="/AllProducts" element={<RenderingPage/>}/>
+                    <Route path="/AllSales" element={<RenderingPage type={"Sales"}/>}/>
                     <Route path="/*" element={<NotFound />} />
-                    <Route path="/cart" element={<Cart/>}/>
+                    <Route path="/Cart" element={<Cart/>}/>
                 </Routes>
                 <Footer />
         </div>

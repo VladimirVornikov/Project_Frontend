@@ -19,14 +19,14 @@ export default function CategoriesHome() {
             <span className={style.spanCategories}>
                 <Title title={"Categories"} />
                 <hr className={style.hr} />
-                <Link to="/categories">
+                <Link to="/Categories">
                     <ShowButton title={"All categories"} />
                 </Link>
             </span>
             <div className={style.categoriesContainer}>
                 {categories.slice(0, -1).map((categorie) => (
                     <div key={categorie.id} className={style.categorieDiv}>
-                        <Link to={`/categories/${categorie.id}`}>
+                        <Link to={`/Categories/${categorie.id}`}>
                             <img
                                 className={style.img}
                                 src={`http://localhost:3333${categorie.image}`}

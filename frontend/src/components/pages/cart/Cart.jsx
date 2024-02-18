@@ -15,8 +15,6 @@ export default function Cart() {
     const products = useSelector((store) => store.cart);
     const dispatch = useDispatch();
 
-    console.log(products.items);
-
     useEffect(() => {
         dispatch(updateTotalSumAndCountItem())
     }, [products])
@@ -28,7 +26,7 @@ export default function Cart() {
             <span className={style.spanCart}>
                 <Title title={"Shopping cart"} />
                 <hr className={style.hr} />
-                <Link to="/allProducts">
+                <Link to="/AllProducts">
                     <ShowButton title={"Back to the store"} />
                 </Link>
             </span>
