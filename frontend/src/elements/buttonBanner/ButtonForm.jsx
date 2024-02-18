@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, {  useState } from 'react';
 import style from './ButtonForm.module.css';
 import Modal from '../containers/Modal';
 import { useDispatch } from 'react-redux';
@@ -19,7 +19,7 @@ export default function ButtonForm({ type, usersInfo, setReset }) {
             dispatch(getDiscount());
         } else {
             e.preventDefault();
-            alert("Your form is not full");
+            alert("Please, fill out your form");
         }
     }
     function closeModal() {
