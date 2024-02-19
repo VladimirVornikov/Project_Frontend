@@ -6,7 +6,7 @@ import categoriesSlice from "./reducers/categoriesSlice";
 import cartSlice from "./reducers/cartSlice";
 
 import storage from "redux-persist/lib/storage";
-import { persistReducer, persistStore } from 'redux-persist';
+import {  persistStore, persistReducer, PERSIST } from 'redux-persist';
 
 const persistConfig = {
     key: "localStore",
@@ -26,6 +26,12 @@ const persistedReducer = persistReducer(persistConfig, rootReducer);
 
 export const store = configureStore({
     reducer: persistedReducer,
+    middleware: (getDefaultMiddleware) =>
+        getDefaultMiddleware({
+            serializableCheck: {
+                ignoredActions:  PERSIST
+            },
+        }),
     
 });
 

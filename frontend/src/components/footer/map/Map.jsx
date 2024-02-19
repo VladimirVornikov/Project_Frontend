@@ -1,12 +1,14 @@
 import React from "react";
+import style from './Map.module.css';
 
 export default function Map() {
     return (
         <div>
-            <div style={{width: "100%"}}>
+            <div className={style.mapContainer}>
                 <iframe
-                    width="1360"
-                    height="350"
+                    title="Google Map"
+                    width="100%"
+                    height="100%"
                     frameBorder="0"
                     src="https://maps.google.com/maps?width=1360&amp;height=350&amp;hl=en&amp;q=Linkstrasse%202,%208%20OG,%2010785,%20Berlin,%20Deutschland+(TelRan)&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
                 >

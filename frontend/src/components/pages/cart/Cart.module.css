@@ -95,3 +95,10 @@
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
+@media (max-width: 1000px) {
+    .spanCart {
+        max-width: 960px;
+        width: 100%;
+    }
+}

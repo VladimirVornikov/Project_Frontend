@@ -1,0 +1,40 @@
+.mapContainer {
+    max-width: 1360px;
+    width: 100%;
+    height: 350px;
+    overflow: hidden; 
+}
+
+@media (max-width: 1000px) {
+    .mapContainer {
+        width: 960px;
+        height: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    .mapContainer {
+        width: 723px;
+        height: 250px;
+    }
+}
+@media (max-width: 480px) {
+    .mapContainer {
+        width: 440px;
+        height: 250px;
+    }
+}
+@media (max-width: 480px) {
+    .mapContainer {
+        width: 440px;
+        height: 250px;
+    }
+}
+@media (max-width: 360px) {
+    .mapContainer {
+        margin-top: 20px;
+        width: 320px;
+        height: 250px;
+    }
+}
+

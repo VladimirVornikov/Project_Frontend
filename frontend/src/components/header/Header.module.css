@@ -1,23 +1,25 @@
 .headerMain {
-    width: 1440px;
+    width: 100%; 
+    max-width: 1440px; 
     height: 128px;
     display: flex;
     border-bottom: 1px solid rgba(221, 221, 221, 1);
     margin-bottom: 40px;
+    justify-content: space-between;
+    padding: 0px 40px 28px 40px;
+
 }
 
 .logo {
     width: 70px;
     height: 70px;
     margin-top: 30px;
-    margin-left: 40px;
 }
 
 .navBar {
     width: 518px;
     height: 26px;
     margin-top: 54px;
-    margin-left: 351px;
     display: flex;
     gap: 32px;
 }
@@ -33,7 +35,6 @@ a {
 .basketContainer {
     position: relative;
     margin-top: 41px;
-    margin-left: 373px;
     margin-bottom: 39px;
 }
 
@@ -62,5 +63,76 @@ a {
 a:hover{
     text-decoration: underline;
     color: rgba(51, 153, 51, 1);
+}
 
+.burgerWrapper {
+    display: flex;
+    gap: 20px;
+}
+
+.burgerMenu {
+    margin-top: 50px;
+    display: none;
+    width: 44px;
+    height: 44px;
+}
+
+.line{
+    margin: 5px;
+    display: block;
+    width: 44px;
+    height: 5px;
+    background-color: black;
+    transition: 0.5s;
+}
+
+
+.active > .line:nth-child(1){
+    position: relative;
+    top: 10px;
+    transform: rotate(45deg);
+}
+
+.active > .line:nth-child(2){
+    position: relative;
+    transform: rotate(315deg);
+}
+
+.active > .line:nth-child(3){
+    position: relative;
+    top: -10px;
+    transform: rotate(45deg);
+}
+
+@media (max-width: 768px) {
+    .headerMain {
+        height: 110px;
+        padding: 0px 20px 28px 20px;
+        gap: 5px;
+    }
+    .navBar {
+        gap: 18px;
+    }
+}
+@media (max-width: 630px) {
+    .burgerMenu{
+        display: inline;
+    }
+    .navBar {
+        display: none;
+    }
+    .activeMenu {
+        display: flex;
+        position: fixed;
+        transition: transform 0.5s;
+        flex-direction: column;
+        width: 282px;
+        height: auto;
+        background-color: white;
+        top: 55px;
+        left: 0;
+        bottom: 0;
+        z-index: 1000; 
+        transform: translateX(0%); 
+    }
 }

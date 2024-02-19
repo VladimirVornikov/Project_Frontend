@@ -16,6 +16,7 @@
     margin-top: 16px;
     margin-left: 32px;
     color: rgba(40, 40, 40, 1);
+    margin-bottom: 32px;
 }
 
 .socialMedia {
@@ -31,4 +32,30 @@
 .img:hover {
     transform: scale(1.2);
     transition: transform 1s;
+}
+
+@media (max-width: 1000px) {
+
+}
+
+@media (max-width: 768px) {
+    .text {
+        font-size: 28px;
+        line-height: 31px;
+        margin-bottom: 24px;
+        margin-left: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+
+}
+
+@media (max-width: 360px) {
+    .text {
+        font-size: 28px;
+        line-height: 31px;
+        margin-bottom: 24px;
+        margin-left: 24px;
+    }
 }
