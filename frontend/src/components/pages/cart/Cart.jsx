@@ -26,8 +26,8 @@ export default function Cart() {
             <span className={style.spanCart}>
                 <Title title={"Shopping cart"} />
                 <hr className={style.hr} />
-                <Link to="/AllProducts">
-                    <ShowButton title={"Back to the store"} />
+                <Link to="/AllProducts"  className={style.backButton1}>
+                    <ShowButton title={"Back to the store"}/>
                 </Link>
             </span>
 
@@ -61,6 +61,9 @@ export default function Cart() {
                 </h1>
                 <Link to="/allProducts">
                     <Button info={"Continue Shopping"} width={"313px"} />
+                </Link>
+                <Link to="/AllProducts"  className={style.backButton2}>
+                    <ShowButton title={"Back to the store"} />
                 </Link>
                 </>
             }

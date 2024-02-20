@@ -1,6 +1,13 @@
-.Title {
+.title {
     font-size: 64px;
     font-weight: 700;
     color: rgba(40, 40, 40, 1);
     margin-bottom: 40px;
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 40px;
+        font-weight: 500;
+    }
 }
