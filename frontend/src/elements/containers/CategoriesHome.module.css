@@ -1,12 +1,14 @@
-.CategorieHomeContainer {
-    width: 1360px;
-    height: 528px;
+.categorieHomeContainer {
+    max-width: 1360px;
+    width: 100%;
+    /* height: 528px; */
     margin-left: 40px;
     margin-bottom: 80px;
 }
 
 .categorieDiv {
-    width: 316px;
+    max-width: 316px;
+    width: 100%;
     height: 392px;
 }
 
@@ -40,4 +42,21 @@
     border-top: 1px solid rgba(221, 221, 221, 1);
     margin-top: 45px;
     margin-left: 30px;
+}
+
+@media (max-width: 1000px) {
+    .categorieHomeContainer {
+        height: 420px;
+        margin-left: 40px;
+        margin-bottom: 80px;
+    }
+}
+@media (max-width: 768px) {
+
+}
+@media (max-width: 480px) {
+
+}
+@media (max-width: 360px) {
+
 }

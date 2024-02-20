@@ -15,7 +15,7 @@ export default function CategoriesHome() {
     }, []);
 
     return (
-        <div className={style.CategorieHomeContainer}>
+        <div className={style.categorieHomeContainer}>
             <span className={style.spanCategories}>
                 <Title title={"Categories"} />
                 <hr className={style.hr} />

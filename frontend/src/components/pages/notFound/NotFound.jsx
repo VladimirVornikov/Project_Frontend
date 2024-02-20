@@ -6,9 +6,9 @@ import {Link} from 'react-router-dom';
 
 export default function NotFound() {
     return (
-        <div className={style.NotFoundContainer}>
-            <img src={ErrorImage} alt="No image" />
-            <div className={style.ErrorInfo}>
+        <div className={style.notFoundContainer}>
+            <img src={ErrorImage} alt="No image"  className={style.img}/>
+            <div className={style.errorInfo}>
                 <h1 className={style.h1}>Page Not Found</h1>
                 <p className={style.p}>
                     We're sorry, the page you requested could not be found,{" "}
