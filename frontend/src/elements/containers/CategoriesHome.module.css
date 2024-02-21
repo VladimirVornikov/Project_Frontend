@@ -1,8 +1,7 @@
 .categorieHomeContainer {
     max-width: 1360px;
-    width: 100%;
-    /* height: 528px; */
-    margin-left: 40px;
+    width: 97.1%;
+    margin-left: 2.9%;
     margin-bottom: 80px;
 }
 
@@ -13,12 +12,14 @@
 }
 
 .categoriesContainer {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 32px;
 }
 
 .img {
-    width: 316px;
+    max-width: 316px;
+    width: 100%;
     height: 350px;
     border-radius: 10px;
     object-fit: cover;
@@ -45,18 +46,16 @@
 }
 
 @media (max-width: 1000px) {
-    .categorieHomeContainer {
-        height: 420px;
-        margin-left: 40px;
-        margin-bottom: 80px;
-    }
 }
 @media (max-width: 768px) {
-
-}
-@media (max-width: 480px) {
-
+    .categoriesContainer {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+    
 }
 @media (max-width: 360px) {
-
+    .categoriesContainer {
+        grid-template-columns: 1fr;
+    }
 }

@@ -1,10 +1,12 @@
 .GetDiscount {
-    width: 1360px;
-    height: auto;
-    margin-left: 40px;
+    max-width: 1360px;
+    width: 97.1%;
+    margin-left: 2.9%;
     background-color: green;
     border-radius: 10px;
     margin-bottom: 80px;
+    padding-left: 32px;
+    padding-right: 32px;
 }
 
 .title {
@@ -18,4 +20,22 @@
 .GetDiscountMain {
     display: flex;
     margin-top: 16px;
+    max-width: 1360px;
+    width: 100%;
+}
+
+.img {
+    max-width: 1360px;
+    width: 56.3%;
+    margin-right: 32px;
+}
+
+@media (max-width: 480px) {
+    .GetDiscountMain {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .img {
+        margin-left: 25%;
+    }
 }

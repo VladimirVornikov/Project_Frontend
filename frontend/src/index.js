@@ -7,7 +7,8 @@ import App from './App';
 import { PersistGate } from "redux-persist/integration/react";
 
 
-export const ROOT_URL = "http://localhost:3333"
+// export const ROOT_URL = "http://localhost:3333"
+export const ROOT_URL = "https://telran-backend-7uea.onrender.com"
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
