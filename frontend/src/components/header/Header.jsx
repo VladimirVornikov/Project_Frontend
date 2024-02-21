@@ -14,28 +14,28 @@ export default function Header() {
     }
 
     return (
-        <div className={style.headerMain}>
+        <div className={style.header_main}>
             <Link to={"/"}>
                 <img src={Logo} alt="No image" className={style.logo} />
             </Link>
-            <nav className={`${style.navBar} ${burgerActive ? style.activeMenu : ""}`}>
+            <nav className={`${style.nav_bar} ${burgerActive ? style.active_menu : ""}`}>
                 <Link to={"/"} onClick={() => setBurgerActive(false)}>Main page</Link>
                 <Link to={'/Categories'} onClick={() => setBurgerActive(false)}>Categories</Link>
                 <Link to={"/AllProducts"} onClick={() => setBurgerActive(false)}>All product</Link>
                 <Link to={"/AllSales"} onClick={() => setBurgerActive(false)}>All sale</Link>
             </nav>
             
-            <div className={style.burgerWrapper}>
-                <Link to={"/Cart"} className={style.basketContainer} onClick={() => setBurgerActive(false)}>
+            <div className={style.burger_wrapper}>
+                <Link to={"/Cart"} className={style.basket_container} onClick={() => setBurgerActive(false)}>
                     {itemsNumber.countItem > 0 
                         ? 
                         <p className={itemsNumber.discountFactor < 1 
-                        ?  style.itemsInBasketDiscount : style.itemsInBasket}>
+                        ?  style.items_in_basket_discount : style.items_in_basket}>
                             {itemsNumber.countItem}</p> 
                         : ''}
                     <img src={Basket} alt="No image" className={style.basket}/>
                 </Link>
-                <div className={`${style.burgerMenu} ${burgerActive ? style.active : ""}`} onClick={openBurgerMenu}>
+                <div className={`${style.burger_menu} ${burgerActive ? style.active : ""}`} onClick={openBurgerMenu}>
                     <span className={style.line}></span>
                     <span className={style.line}></span>
                     <span className={style.line}></span>

@@ -1,10 +1,10 @@
-import React from "react";
 import style from './Map.module.css';
+import React from "react";
 
 export default function Map() {
     return (
         <div>
-            <div className={style.mapContainer}>
+            <div className={style.map_container}>
                 <iframe
                     title="Google Map"
                     width="100%"

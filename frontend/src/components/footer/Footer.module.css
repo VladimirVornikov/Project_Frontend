@@ -4,7 +4,7 @@
     margin: 4.87% 2.43% 4.87% 2.43%;
 }
 
-.footerInfoContainer {
+.footer_info_container {
     max-width: 1360px;
     width: 100%;
     display: grid;
@@ -21,7 +21,7 @@
         margin-left: 2%;
     }
 
-    .footerInfoContainer {
+    .footer_info_container {
         max-width: 960px;
         grid-template-columns: 1fr 1fr; 
         gap: 20px;
@@ -34,7 +34,7 @@
         width: 96%;
     }
 
-    .footerInfoContainer {
+    .footer_info_container {
         max-width: 728px;
         grid-template-columns: 3fr 1fr; 
         gap: 20px;
@@ -45,7 +45,7 @@
         width: 420px;
         width: 96%;
     }
-    .footerInfoContainer {
+    .footer_info_container {
         max-width: 440px;
         width: 100%;
         grid-template-columns: 1fr; 
@@ -60,7 +60,7 @@
 
     }
 
-    .footerInfoContainer {
+    .footer_info_container {
         width: 320px;
         grid-template-columns: 1fr; 
         gap: 12px;

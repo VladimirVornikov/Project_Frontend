@@ -5,6 +5,7 @@ import {fetchCategoriesList} from "../../store/asyncAction/fetchCategories";
 import ShowButton from "../buttonCard/ShowButton";
 import {Link} from "react-router-dom";
 import Title from "../inputs/Title";
+import { ROOT_URL } from "../..";
 
 export default function CategoriesHome() {
     const categories = useSelector((store) => store.categories);
@@ -29,7 +30,7 @@ export default function CategoriesHome() {
                         <Link to={`/Categories/${categorie.id}`}>
                             <img
                                 className={style.img}
-                                src={`http://localhost:3333${categorie.image}`}
+                                src={`${ROOT_URL}${categorie.image}`}
                             />
                         </Link>
                         <p className={style.p}>{categorie.title}</p>

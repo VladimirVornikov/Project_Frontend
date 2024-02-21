@@ -3,12 +3,12 @@ import style from "./InfoBlock.module.css";
 
 export default function InfoBlock(props) {
     return (
-        <div className={style.infoBlock}>
+        <div className={style.info_block}>
             <p className={style.title}>{props.title}</p>
             <p className={style.text}>{props.text}</p>
             
             {props.images && (
-                <div className={style.socialMedia}>
+                <div className={style.social_media}>
                     {props.images.map((social, index) => (
                         <a href={index === 0 ? 
                             "https://www.instagram.com/startainstitute/" : "https://t.me/Starta_Institute_By_TelRan"} 

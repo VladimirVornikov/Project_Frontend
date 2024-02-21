@@ -4,10 +4,12 @@ import Title from "../../../elements/inputs/Title";
 import style from "./Categories.module.css";
 import React, {useEffect} from "react";
 import {Link} from "react-router-dom";
+import { ROOT_URL } from "../../..";
 
 export default function CategorieHome() {
     const categories = useSelector((store) => store.categories);
     const dispatch = useDispatch();
+    console.log(categories);
 
     useEffect(() => {
         dispatch(fetchCategoriesList())
@@ -22,7 +24,7 @@ export default function CategorieHome() {
                         <Link to={`/Categories/${categorie.id}`}>
                             <img
                                 className={style.img}
-                                src={`http://localhost:3333${categorie.image}`}
+                                src={`${ROOT_URL}${categorie.image}`}
                             />
                         </Link>
                         <p className={style.p}>{categorie.title}</p>

@@ -1,10 +1,10 @@
-import React from 'react'
-import InfoBlock from './InfoBlock'
-import style from './Footer.module.css'
-import Map from './map/Map'
-import Insta from '../../elements/images/ic-instagram.png'
 import Whatsapp from '../../elements/images/ic-whatsapp.png'
+import Insta from '../../elements/images/ic-instagram.png'
 import Title from '../../elements/inputs/Title'
+import style from './Footer.module.css'
+import InfoBlock from './InfoBlock'
+import Map from './map/Map'
+import React from 'react'
 
 export default function Footer() {
   const socialMedia = [Insta, Whatsapp]
@@ -12,7 +12,7 @@ export default function Footer() {
   return (
     <div className={style.footer}>
       <Title title={"Contact"}/>
-      <footer className={style.footerInfoContainer}>
+      <footer className={style.footer_info_container}>
         <InfoBlock title={"Phone"} text={'+49 157 359 89 554'}/>
         <InfoBlock title={"Socials"} images={socialMedia}/>
         <InfoBlock title={"Address"} text={'Linkstrasse 2, 8 OG, 10785, Berlin, Deutschland'}/>
