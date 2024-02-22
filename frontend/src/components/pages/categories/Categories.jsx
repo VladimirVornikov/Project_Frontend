@@ -16,11 +16,11 @@ export default function CategorieHome() {
     }, []);
 
     return (
-        <div className={style.CategoriesContainer}>
+        <div className={style.categories_wrapper}>
             <Title title={"Categories"} />
-            <div className={style.categoriesContainer}>
+            <div className={style.categories_container}>
                 {categories.map((categorie) => (
-                    <div key={categorie.id} className={style.categorieDiv}>
+                    <div key={categorie.id} className={style.categorie_div}>
                         <Link to={`/Categories/${categorie.id}`}>
                             <img
                                 className={style.img}

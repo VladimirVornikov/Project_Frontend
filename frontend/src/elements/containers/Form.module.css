@@ -6,9 +6,3 @@
     max-width: 518px;
     width: 100%;
 }
-
-.errorField {
-    color: red;
-    text-decoration: underline;
-    font-size: 12px;
-}

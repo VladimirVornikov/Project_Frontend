@@ -14,14 +14,14 @@ export default function Breadcrumbs() {
     
     if(site.some(category => splitLocation.includes(category))) {
         return (
-            <div className={style.BreadcrumbsContainer}>
+            <div className={style.breadcrumbs_container}>
                 <Link to={"/"}>
-                    <button className={style.BreadcrumbsBtn}>Main page</button>
+                    <button className={style.breadcrumbs_btn}>Main page</button>
                 </Link>
                 {crumbs.map((crum, index) => (
                     <Link key={index} to={ index === crumbs.length -1 ? location.pathname :`/${changeLink(crum)}`}>
                         <div  className={style.line}/>
-                        <button key={index}  className={index === crumbs.length - 1 ? style.BreadcrumbsBtnLast : style.BreadcrumbsBtn}>
+                        <button key={index}  className={index === crumbs.length - 1 ? style.breadcrumbs_btn_last : style.breadcrumbs_btn}>
                             {capitalize(crum)}
                         </button>
                     </Link>

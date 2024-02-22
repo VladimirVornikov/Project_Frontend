@@ -40,11 +40,11 @@ export default function RenderingPage(props) {
     } 
 
     return (
-        <div className={style.CategoryProducts}>
+        <div className={style.category_products}>
 
             {props.type === "Sale" 
                 ?   
-                <span className={style.spanCategories}>
+                <span className={style.span_categories}>
                         <Title title={productsList.title} />
                         <hr className={style.hr} />
                         <Link to="/AllSales">
@@ -56,16 +56,16 @@ export default function RenderingPage(props) {
                     <FilterBar type={props.type}/> 
                     </>}
 
-            <div className={style.productList}>
+            <div className={style.product_list}>
                 {productsList.products.map(product => product.isShown === true 
                     ?
-                        <div key={product.id} className={style.productContainer}>
+                        <div key={product.id} className={style.product_container}>
                             <Link to={`/Categories/${id ? id : product.categoryId}/${product.id}`}>
                                 <img src={ROOT_URL + product.image} className={style.img}/>
                             </Link>
                             <button onClick={() => {addItemToCart(product); buttonActiveHandle()}}
                                     key={product.id}
-                                    className={buttonActive ? style.addToCartBtnActive : style.addToCartBtn}>
+                                    className={buttonActive ? style.add_to_cart_btn_active : style.add_to_cart_btn}>
                                     {buttonActive ? "Added" : "Add to Cart"}
                             </button>
                             <p className={style.name}>{product.title}</p>

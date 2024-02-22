@@ -1,15 +1,15 @@
-import React, { useEffect } from "react";
-import style from "./Cart.module.css";
-import Title from "../../../elements/inputs/Title";
-import Button from "../../../elements/buttonCard/CheckOutBtn";
-import ShowButton from "../../../elements/buttonCard/ShowButton";
-import {Link} from "react-router-dom";
-import {useDispatch, useSelector} from "react-redux";
-import {ROOT_URL} from "../../..";
-import Counter from "../../../elements/containers/Counter";
 import { deleteProduct, updateTotalSumAndCountItem } from "../../../store/reducers/cartSlice";
 import PriceContainer from "../../../elements/containers/PriceContainer";
 import OrderDetails from "../../../elements/containers/OrderDetails";
+import ShowButton from "../../../elements/buttonCard/ShowButton";
+import Button from "../../../elements/buttonCard/CheckOutBtn";
+import Counter from "../../../elements/containers/Counter";
+import {useDispatch, useSelector} from "react-redux";
+import Title from "../../../elements/inputs/Title";
+import React, { useEffect } from "react";
+import style from "./Cart.module.css";
+import {Link} from "react-router-dom";
+import {ROOT_URL} from "../../..";
 
 export default function Cart() {
     const products = useSelector((store) => store.cart);
@@ -21,28 +21,28 @@ export default function Cart() {
 
 
     return (
-        <div className={style.emptyCart}>
+        <div className={style.empty_cart}>
             
-            <span className={style.spanCart}>
+            <span className={style.span_cart}>
                 <Title title={"Shopping cart"} />
                 <hr className={style.hr} />
-                <Link to="/AllProducts"  className={style.backButton1}>
+                <Link to="/AllProducts"  className={style.back_button1}>
                     <ShowButton title={"Back to the store"}/>
                 </Link>
             </span>
 
             {products.items.length > 0 ?
-                <span className={style.cartWrapper}>
-                    <div className={style.cartWithProducts}>
+                <span className={style.cart_wrapper}>
+                    <div className={style.cart_with_products}>
                         {products.items.map(product => (
-                            <span key={product.id} className={style.productContainer}>
-                                <img src={ROOT_URL + `${product.image}`} className={style.imgProduct}/>
-                                <span className={style.productWrapper}>
-                                    <div className={style.counterInfo}>
+                            <span key={product.id} className={style.product_container}>
+                                <img src={ROOT_URL + `${product.image}`} className={style.img_product}/>
+                                <span className={style.product_wrapper}>
+                                    <div className={style.counter_info}>
                                         <p className={style.productName}>{product.title}</p>
                                         <div  className={style.cross} onClick={() => dispatch(deleteProduct(product.id))}>X</div>
                                     </div>
-                                    <span className={style.priceContainer}>
+                                    <span className={style.price_container}>
                                         <Counter number={product.quantity} id={product.id}/>
                                         <PriceContainer price={product.price} discount={product.discont_price} />
                                     </span>
@@ -62,7 +62,7 @@ export default function Cart() {
                 <Link to="/allProducts">
                     <Button info={"Continue Shopping"} width={"313px"} />
                 </Link>
-                <Link to="/AllProducts"  className={style.backButton2}>
+                <Link to="/AllProducts"  className={style.back_button2}>
                     <ShowButton title={"Back to the store"} />
                 </Link>
                 </>

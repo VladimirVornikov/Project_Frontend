@@ -1,4 +1,4 @@
-.additionSubtraction {
+.addition_subtraction {
     display: flex;
     width: 200px;
     height: 59px;
@@ -7,7 +7,7 @@
     justify-content: space-between;
 }
 
-.addSubButtons {
+.add_sub_buttons {
     width: 58px;
     height: 58px;
     border: 1px solid rgba(221, 221, 221, 1);

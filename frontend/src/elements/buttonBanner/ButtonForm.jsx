@@ -1,13 +1,12 @@
-import React, {  useState } from 'react';
-import style from './ButtonForm.module.css';
-import Modal from '../containers/Modal';
-import { useDispatch } from 'react-redux';
 import { getDiscount, sendItemsToServer, } from '../../store/reducers/cartSlice';
+import style from './ButtonForm.module.css';
+import { useDispatch } from 'react-redux';
+import React, {  useState } from 'react';
+import Modal from '../containers/Modal';
 
 export default function ButtonForm({ type, usersInfo, setReset }) {
     const [active, setActive] = useState(false);
     const [modalOpen, setModalOpen] = useState(false);
-
     const dispatch = useDispatch();
 
     function handleActiveButton(e) {
@@ -22,6 +21,7 @@ export default function ButtonForm({ type, usersInfo, setReset }) {
             alert("Please, fill out your form");
         }
     }
+
     function closeModal() {
         setReset(true);
         setModalOpen(false);
@@ -36,8 +36,8 @@ export default function ButtonForm({ type, usersInfo, setReset }) {
             <button
                 onClick={handleActiveButton}
                 className={
-                    type === 'OrdersDetails' ? style.orderButton :
-                        active ? style.getDiscountBtnActive : style.getDiscountBtn
+                    type === 'OrdersDetails' ? style.order_button :
+                        active ? style.get_discount_btn_active : style.get_discount_btn
                 }>
                 {type === 'OrdersDetails' ? 'Order' :
                     active ? 'Request Submitted' : 'Get a discount'}

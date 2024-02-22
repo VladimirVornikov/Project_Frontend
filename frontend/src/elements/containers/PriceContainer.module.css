@@ -1,22 +1,22 @@
-.productPriceContainer {
+.product_price_container {
     margin-bottom: 32px;
     display: flex;
     gap: 16px;
 }
 
-.allPriceConainer {
+.all_price_conainer {
     margin-bottom: 32px;
     margin-left: 32px;
     display: flex;
     justify-content: space-between;
 }
 
-.priceWrapper{
+.price_wrapper{
     display: flex;
     gap: 16px;
 }
 
-.productPrice {
+.product_price {
     font-size: 64px;
     font-weight: 700;
     line-height: 70.5px;
@@ -30,7 +30,7 @@
     color: rgba(40, 40, 40, 1);
 }
 
-.discountProductPrice {
+.discount_product_price {
     font-size: 40px;
     font-weight: 500;
     line-height: 52px;

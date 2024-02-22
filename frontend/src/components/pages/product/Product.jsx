@@ -1,13 +1,14 @@
+import { addProduct, updateTotalSumAndCountItem } from '../../../store/reducers/cartSlice'
+import PriceContainer from '../../../elements/containers/PriceContainer'
 import { fetchProduct } from '../../../store/asyncAction/fetchCategories'
 import Button from '../../../elements/buttonCard/CheckOutBtn'
+import { set } from '../../../store/reducers/counterSlice'
+import Counter from '../../../elements/containers/Counter'
 import { useDispatch, useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
 import React, { useEffect}  from 'react'
 import style from './Product.module.css'
-import { set } from '../../../store/reducers/counterSlice'
-import { addProduct, updateTotalSumAndCountItem } from '../../../store/reducers/cartSlice'
-import Counter from '../../../elements/containers/Counter'
-import PriceContainer from '../../../elements/containers/PriceContainer'
+import { ROOT_URL } from '../../..'
 
 export default function Product() {
     const product = useSelector(store => store.product)
@@ -29,8 +30,8 @@ export default function Product() {
     }
 
     return (
-        <div className={style.productContainer}>
-            <img src={`http://localhost:3333${product.image}`} className={style.img}/>
+        <div className={style.product_container}>
+            <img src={`${ROOT_URL}${product.image}`} className={style.img}/>
             <div>
                 <h3 className={style.title}>{product.title}</h3>
                 <PriceContainer price={product.price} discount={product.discont_price} isProduct={true}/>
@@ -39,7 +40,7 @@ export default function Product() {
                     <Button info={"Add to cart"} width={"316px"} />
                 </form>
                 <h3 className={style.description}>Description</h3>
-                <p className={style.infoBlock}>{product.description}</p>
+                <p className={style.info_block}>{product.description}</p>
             </div>
         </div>
     )

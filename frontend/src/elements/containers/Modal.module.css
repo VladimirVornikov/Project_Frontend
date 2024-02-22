@@ -1,4 +1,4 @@
-.modalOverlay {
+.modal_overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -10,7 +10,7 @@
     align-items: center;
 }
 
-.modalContent {
+.modal_content {
     width: 548px;
     background-color: green;
     padding: 32px;
@@ -38,7 +38,7 @@
     cursor: pointer;
 }
 
-.textWrapper {
+.text_wrapper {
     width: 424px;
     height: 104px;
     display: flex;

@@ -1,17 +1,17 @@
-.categorieHomeContainer {
+.categorie_home_container {
     max-width: 1360px;
     width: 97.1%;
     margin-left: 2.9%;
     margin-bottom: 80px;
 }
 
-.categorieDiv {
+.categorie_div {
     max-width: 316px;
     width: 100%;
     height: 392px;
 }
 
-.categoriesContainer {
+.categories_container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 32px;
@@ -48,14 +48,14 @@
 @media (max-width: 1000px) {
 }
 @media (max-width: 768px) {
-    .categoriesContainer {
+    .categories_container {
         grid-template-columns: 1fr 1fr;
         gap: 20px;
     }
     
 }
 @media (max-width: 360px) {
-    .categoriesContainer {
+    .categories_container {
         grid-template-columns: 1fr;
     }
 }

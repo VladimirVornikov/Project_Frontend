@@ -1,4 +1,4 @@
-.GetDiscount {
+.get_discount {
     max-width: 1360px;
     width: 97.1%;
     margin-left: 2.9%;
@@ -17,7 +17,7 @@
     padding-top: 32px;
 }
 
-.GetDiscountMain {
+.get_discount_main {
     display: flex;
     margin-top: 16px;
     max-width: 1360px;
@@ -31,7 +31,7 @@
 }
 
 @media (max-width: 480px) {
-    .GetDiscountMain {
+    .get_discount_main {
         display: grid;
         grid-template-columns: 1fr;
     }

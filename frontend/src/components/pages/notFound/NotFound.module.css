@@ -1,4 +1,4 @@
-.notFoundContainer{
+.not_found_container{
     width: 760px;
     height: 530px;
     margin: 4.87% 22.83% 4.87% 22.83%;
@@ -7,7 +7,7 @@
     align-items: center;
 }
 
-.errorInfo {
+.error_info {
     margin-top: 32px;
     display: flex;
     flex-direction: column;
@@ -33,12 +33,12 @@
 
 
 @media (max-width: 1000px) {
-    .notFoundContainer {
+    .not_found_container {
         margin: 6% 10% 6% 10%;
     }
 }
 @media (max-width: 768px) {
-    .notFoundContainer {
+    .not_found_container {
         margin-left: 0;
         margin-right: 0;
         padding: 1%;

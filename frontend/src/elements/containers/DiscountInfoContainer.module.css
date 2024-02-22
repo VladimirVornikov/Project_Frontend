@@ -1,4 +1,4 @@
-.DiscountInfo {
+.discount_info {
     max-width: 1440px;
     width: 100%;
     height: 600px;
@@ -9,7 +9,7 @@
     top: -40px;
 }
 
-.InfoTextDiscount {
+.info_text_discount {
     font-size: 96px;
     font-weight: 700;
     color:rgba(255, 255, 255, 1);
@@ -20,36 +20,36 @@
 }
 
 @media (max-width: 1000px) {
-    .DiscountInfo {
+    .discount_info {
         height: 476px;
         padding: 60px 20px 0px 20px;
 
     }
-    .InfoTextDiscount {
+    .info_text_discount {
         font-size: 80px;
         line-height: 99px;
     }
 }
 
 @media (max-width: 768px) {
-    .DiscountInfo {
+    .discount_info {
         height: 634px;
     }
-    .InfoTextDiscount {
+    .info_text_discount {
         font-size: 68px;
         line-height: 75px;
     }
 }
 
 @media (max-width: 480px) {
-    .InfoTextDiscount {
+    .info_text_discount {
         font-size: 60px;
         line-height: 66px;
     }
 }
 
 @media (max-width: 360px) {
-    .InfoTextDiscount {
+    .Info_text_discount {
         font-size: 52px;
         line-height: 57px;
     }

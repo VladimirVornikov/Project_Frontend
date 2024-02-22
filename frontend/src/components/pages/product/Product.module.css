@@ -1,4 +1,4 @@
-.productContainer {
+.product_container {
     width: 1360px;
     height: 574px;
     margin-left: 40px;
@@ -36,7 +36,7 @@
     margin-bottom: 16px;
 }
 
-.infoBlock {
+.info_block {
     font-size: 16px;
     font-weight: 400;
     line-height: 21px;

@@ -1,5 +1,5 @@
 
-.BreadcrumbsBtnLast, .BreadcrumbsBtn {
+.breadcrumbs_btn_last, .breadcrumbs_btn {
     height: 36px;
     border: 1px solid rgba(221, 221, 221, 1);
     border-radius: 4px;
@@ -9,10 +9,10 @@
     cursor: pointer;
 }
 
-.BreadcrumbsBtn {
+.breadcrumbs_btn {
     color:  rgba(139, 139, 139, 1);
 }
-.BreadcrumbsContainer {
+.breadcrumbs_container {
     margin-top: 40px;
     margin-bottom: 40px;
     display: flex;

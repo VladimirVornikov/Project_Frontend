@@ -1,5 +1,5 @@
-import React from "react";
 import style from "./InfoBlock.module.css";
+import React from "react";
 
 export default function InfoBlock(props) {
     return (

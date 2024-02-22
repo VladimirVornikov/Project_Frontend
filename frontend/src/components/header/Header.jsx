@@ -1,9 +1,9 @@
+import Basket from "../../elements/images/basket=empty.png";
 import React, { useEffect, useState } from "react";
 import Logo from "../../elements/images/logo.png";
-import Basket from "../../elements/images/basket=empty.png";
+import { useSelector } from "react-redux";
 import style from "./Header.module.css";
 import {Link} from 'react-router-dom' 
-import { useSelector } from "react-redux";
 
 export default function Header() {
     const itemsNumber = useSelector(store => store.cart)

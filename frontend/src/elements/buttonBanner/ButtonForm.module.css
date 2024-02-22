@@ -1,4 +1,4 @@
-.getDiscountBtn, .getDiscountBtnActive, .orderButton {
+.get_discount_btn, .get_discount_btn_active, .order_button {
     max-width: 518px;
     width: 100%;
     height: 58px;
@@ -12,15 +12,15 @@
     margin-bottom: 32px;
 }
 
-.getDiscountBtn:hover {
+.get_discount_btn:hover {
     background-color: black;
     color: white;
 }
 
-.getDiscountBtnActive {
+.get_discount_btn_active {
     color: green;
 }
-.orderButton {
+.order_button {
     color: white;
     max-width: 484px;
     width: 100%;
@@ -28,11 +28,11 @@
     background-color: rgba(51, 153, 51, 1);
 }
 
-.orderButton:hover {
+.order_button:hover {
     background-color: black;
 }
 
-.orderButton:active {
+.order_button:active {
     background-color: white;
     color: black;
 }

@@ -1,16 +1,15 @@
+import ButtonForm from '../buttonBanner/ButtonForm';
 import React, { useState } from 'react';
 import style from './Form.module.css';
-import ButtonForm from '../buttonBanner/ButtonForm';
 import Input from '../inputs/Input';
 
 export default function Form(props) {
     const [userName, setUserName] = useState(false)
     const [userPhone, setUserPhone] = useState(false)
     const [userEmail, setUserEmail] = useState(false)
+    const [reset, setResetInput] = useState(false)
 
     const access = [userName, userPhone, userEmail]
-
-    const [reset, setResetInput] = useState(false)
 
     return (
         <form className={style.form}>

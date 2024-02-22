@@ -1,4 +1,4 @@
-.checkOutButton {
+.check_out_button {
     height: 58px;
     color: rgba(255, 255, 255, 1);
     border-radius: 5px;
@@ -8,11 +8,11 @@
     background-color: rgba(51, 153, 51, 1);
 }
 
-.checkOutButton:hover {
+.check_out_button:hover {
     background-color:   black;
 }
 
-.checkOutButton:active {
+.check_out_button:active {
     background-color: white;
     color: black;
 }

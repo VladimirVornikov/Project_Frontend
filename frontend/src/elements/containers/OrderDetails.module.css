@@ -1,4 +1,4 @@
-.orderDetails {
+.order_details {
     background: rgba(241, 243, 244, 1);
     width: 548px;
     height: fit-content;
@@ -14,41 +14,39 @@
     margin-bottom: 24px;
 }
 
-.infoAboutCart {
+.info_about_cart {
     font-size: 40px;
     font-weight: 700;
     line-height: 52px;
     color: rgba(139, 139, 139, 1);
 }
 
-.totalWrapper {
+.total_wrapper {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
     margin-bottom: 32px;
 }
 
-.totalPrice, .totalPriceWithDiscount {
+.total_price, .total_price_with_discount {
     font-size: 64px;
     font-weight: 700;
     line-height: 70.5px;
     color: rgba(40, 40, 40, 1);
 }
 
-.totalPriceWithDiscount {
+.total_price_with_discount {
     font-size: 58px;
     color: rgba(0, 83, 0, 0.767);
 }
 
-
-.totalPricePrev {
+.total_price_prev {
     font-size: 18px;
     font-weight: 400;
     color: rgba(40, 40, 40, 1);
     text-decoration: line-through;
 }
 
-
-.totalPriceWithDiscountWrapper{
+.total_price_with_discount_wrapper{
     display: flex;
 }

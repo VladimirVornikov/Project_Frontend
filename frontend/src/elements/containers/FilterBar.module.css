@@ -1,4 +1,4 @@
-.filterContainer {
+.filter_container {
     width: 908px;
     height: 36px;
     margin-bottom: 40px;
@@ -14,7 +14,7 @@ label {
     color: rgba(40, 40, 40, 1);
 }
 
-.inputRangeError {
+.input_range_error {
     background-color: rgba(255, 0, 0, 0.171);
 }
 
@@ -24,7 +24,7 @@ label {
     align-items: center;
 }
 
-.inputRange, .inputRangeError {
+.input_range, .input_range_error {
     width: 112px;
     height: 36px;
     border: 1px solid rgba(221, 221, 221, 1);
@@ -35,14 +35,14 @@ label {
     line-height: 20px;
 }
 
-.inputRange::placeholder {
+.input_range::placeholder {
     font-size: 16px;
     font-weight: 500;
     line-height: 20px;
     color: rgba(139, 139, 139, 1);
 }
 
-.inputCheckBox {
+.input_check_box {
     width: 36px;
     height: 36px;
     border: 1px solid rgba(221, 221, 221, 1);

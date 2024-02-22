@@ -1,5 +1,5 @@
-import React from 'react'
 import style from "./Modal.module.css"
+import React from 'react'
 
 export default function Modal({ onClose, typeOfButton }) {
     function handleClose(e) {
@@ -9,8 +9,8 @@ export default function Modal({ onClose, typeOfButton }) {
     }
 
     return (
-        <div  onClick={handleClose} className={style.modalOverlay}>
-            <div className={style.modalContent} >
+        <div  onClick={handleClose} className={style.modal_overlay}>
+            <div className={style.modal_content} >
                 <span className={style.info}>
                     <h1 className={style.title}>Congratulations!</h1>
                     <p className={style.cross} onClick={onClose}>x</p>
@@ -18,7 +18,7 @@ export default function Modal({ onClose, typeOfButton }) {
 
             {typeOfButton === "OrdersDetails" 
                 ? 
-                <span className={style.textWrapper}>
+                <span className={style.text_wrapper}>
                     <p className={style.text}>Your order has been successfully placed on the website.</p>
                     <p className={style.text}>A manager will contact you shortly to confirm your order.</p>
                 </span>

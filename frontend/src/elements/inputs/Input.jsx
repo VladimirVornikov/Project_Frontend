@@ -7,7 +7,6 @@ export default function Input(props) {
     const [value, setValue] = useState("");
     const [error, setError] = useState("");
 
-
     useEffect(() => {
         if (resetInput) {
             setValue("");
@@ -53,7 +52,7 @@ export default function Input(props) {
     return (
         <>
             <input
-                className={inputType === "getDiscount" ? style.inputGetdiscount : style.inputOrders}
+                className={inputType === "getDiscount" ? style.input_get_discount : style.input_orders}
                 placeholder={placeholder}
                 type={type}
                 id={id}

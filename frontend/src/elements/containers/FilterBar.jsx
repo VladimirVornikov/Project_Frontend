@@ -1,13 +1,12 @@
+import { filterByInput, filterBySale, filterBySort} from '../../store/reducers/productsAllSlice'
 import React, { useEffect, useState } from 'react'
 import style from './FilterBar.module.css'
 import { useDispatch } from 'react-redux'
-import { filterByInput, filterBySale, filterBySort} from '../../store/reducers/productsAllSlice'
 
 export default function FilterBar({type}) {
     const [priceFrom, setFrom] = useState(0)
     const [priceTo, setTo] = useState(0)
     const [selectedSort, setSelectedSort] = useState('')
-
 
     const dispatch = useDispatch()
 
@@ -20,7 +19,6 @@ export default function FilterBar({type}) {
         setSelectedSort(e.target.value);
     }
 
-
     useEffect(() => {
         setFrom('');
         setTo('');
@@ -32,16 +30,16 @@ export default function FilterBar({type}) {
     }, [priceFrom, priceTo, dispatch])
 
     return (
-        <div className={style.filterContainer}>
+        <div className={style.filter_container}>
             <span className={style.span}>
                 <label htmlFor="price_from" >Price</label>
-                <input  className={style.inputRange} 
+                <input  className={style.input_range} 
                     value={priceFrom} 
                     onChange={(e) => e.target.value >= 0 && e.target.value <= 999 ? setFrom(+e.target.value) : priceFrom}
                     name="price_from" 
                     type="number" 
                     placeholder="from" />
-                <input className={priceTo < priceFrom || priceTo === undefined ? style.inputRangeError : style.inputRange }
+                <input className={priceTo < priceFrom || priceTo === undefined ? style.input_range_error : style.input_range }
                     value={priceTo}
                     onChange={(e) =>  e.target.value >= 0 && e.target.value <=999 ? setTo(+e.target.value) : priceTo}
                     name="price_to" 
@@ -52,7 +50,7 @@ export default function FilterBar({type}) {
             {type !== "Sales"  
                 ?    <span className={style.span}>
                         <label htmlFor="discount">Discounted items</label>
-                        <input className={style.inputCheckBox} onClick={handleSaleBox} type="checkbox" />
+                        <input className={style.input_check_box} onClick={handleSaleBox} type="checkbox" />
                     </span>
                 : ''}
 
@@ -66,7 +64,6 @@ export default function FilterBar({type}) {
                     <option value="low-high">price: low-high</option>
                 </select>
             </span>
-
         </div>
     )
 }
