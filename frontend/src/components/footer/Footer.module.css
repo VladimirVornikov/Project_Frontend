@@ -1,7 +1,7 @@
 .footer {
     max-width: 1360px;
     width: 96%;
-    margin: 4.87% 2.43% 4.87% 2.43%;
+    margin-left: 40px;
 }
 
 .footer_info_container {
@@ -25,6 +25,15 @@
         max-width: 960px;
         grid-template-columns: 1fr 1fr; 
         gap: 20px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .footer {
+        max-width: 1360px;
+        width: 96%;
+        margin-left: 2%;
+        margin-right: 2%;
     }
 }
 
@@ -57,7 +66,6 @@
     .footer {
         width: 320px;
         width: 96%;
-
     }
 
     .footer_info_container {

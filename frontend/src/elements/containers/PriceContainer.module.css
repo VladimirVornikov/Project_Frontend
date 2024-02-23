@@ -23,7 +23,7 @@
     color: rgba(40, 40, 40, 1);
 }
 
-.mainPrice {
+.main_price {
     font-size: 40px;
     font-weight: 600;
     line-height: 44px;
@@ -40,7 +40,7 @@
     margin-left: 16px;
 }
 
-.discountMainPrice {
+.discount_main_price {
     font-size: 20px;
     font-weight: 500;
     line-height: 26px;
@@ -49,7 +49,7 @@
     text-decoration: line-through;
 }
 
-.discountProductBlock {
+.discount_product_block {
     width: 63px;
     height: 34px;
     background-color: rgba(51, 153, 51, 1);
@@ -62,7 +62,7 @@
     padding-top: 4px;
 }
 
-.discountAllBlock {
+.discount_all_block {
     width: 63px;
     height: 34px;
     background-color: rgba(51, 153, 51, 1);
@@ -76,4 +76,27 @@
     position: relative;
     bottom: 337px;
     right: 15px;
+}
+
+@media (max-width: 1000px) {
+    .discount_all_block {
+        right: 50%;
+    }
+    .discount_main_price {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .discount_all_block {
+        right: 50%;
+    }
+}
+@media (max-width: 360px) {
+    .discount_all_block {
+        right: 15px;
+    }
+    .discount_main_price {
+        font-size: 20px
+    }
 }

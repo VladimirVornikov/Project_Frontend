@@ -1,5 +1,6 @@
 .filter_container {
-    width: 908px;
+    max-width: 908px;
+    width: 100%;
     height: 36px;
     margin-bottom: 40px;
     display: flex;
@@ -58,4 +59,19 @@ label {
     line-height: 20px;
     color: rgba(40, 40, 40, 1);
     padding-left: 16px;
+}
+
+
+@media (max-width: 900px) {
+    .filter_container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        height: auto;
+    }
+}
+
+@media (max-width: 640px) {
+    .filter_container {
+        grid-template-columns: 1fr ;
+    }
 }

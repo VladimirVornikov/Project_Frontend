@@ -1,15 +1,15 @@
+import { addProduct, updateTotalSumAndCountItem } from '../../../store/reducers/cartSlice';
 import { fetchCategory, fetchData } from '../../../store/asyncAction/fetchCategories';
+import PriceContainer from '../../../elements/containers/PriceContainer';
+import { clearData } from '../../../store/reducers/productsAllSlice';
 import ShowButton from '../../../elements/buttonCard/ShowButton';
 import FilterBar from '../../../elements/containers/FilterBar';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useParams } from 'react-router-dom';
 import Title from '../../../elements/inputs/Title';
-import style from './RenderingPage.module.css'
 import React, { useEffect, useState } from 'react'
+import style from './RenderingPage.module.css'
 import { ROOT_URL } from '../../..';
-import { clearData } from '../../../store/reducers/productsAllSlice';
-import { addProduct, updateTotalSumAndCountItem } from '../../../store/reducers/cartSlice';
-import PriceContainer from '../../../elements/containers/PriceContainer';
 
 export default function RenderingPage(props) {
     const [buttonActive, setActive] = useState(false)

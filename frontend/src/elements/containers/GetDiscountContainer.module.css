@@ -1,7 +1,7 @@
 .get_discount {
     max-width: 1360px;
-    width: 97.1%;
-    margin-left: 2.9%;
+    width: 94.4%;
+    margin-left: 40px;
     background-color: green;
     border-radius: 10px;
     margin-bottom: 80px;
@@ -28,6 +28,13 @@
     max-width: 1360px;
     width: 56.3%;
     margin-right: 32px;
+}
+
+@media (max-width: 1000px) {
+    .get_discount {
+        margin-left: 2.8%;
+        margin-right: 2.8%;
+    }
 }
 
 @media (max-width: 480px) {
