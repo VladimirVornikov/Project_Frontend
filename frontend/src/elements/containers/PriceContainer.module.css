@@ -90,11 +90,17 @@
     .discount_all_block {
         right: 50%;
     }
+    .main_price {
+        font-size: 30px;
+    }
 }
 
 @media (max-width: 680px) {
     .product_price_container {
         justify-self: center;
+    }
+    .main_price {
+        font-size: 20px;
     }
 }
 

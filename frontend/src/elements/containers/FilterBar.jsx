@@ -11,12 +11,18 @@ export default function FilterBar({type}) {
     const dispatch = useDispatch()
 
     function handleSaleBox(e) {
-        dispatch(filterBySale(e.target.checked))
+        e.target.checked === true 
+            ? dispatch(filterBySale(e.target.checked))
+            : dispatch(filterByInput({priceFrom, priceTo: priceTo || 200}))
+
     }
 
     function handleSortedBox(e) {
         dispatch(filterBySort(e.target.value))
-        setSelectedSort(e.target.value);
+        setSelectedSort(e.target.value)
+        if(e.target.value == "default") {
+            dispatch(filterByInput({priceFrom, priceTo: priceTo || 200}))
+        };
     }
 
     useEffect(() => {
@@ -57,7 +63,7 @@ export default function FilterBar({type}) {
             <span className={style.span}>
                 <label htmlFor="sort_category">Sorted</label>
                 <select className={style.select} name="sort_category" onChange={handleSortedBox} value={selectedSort}>
-                    <option value="">by default</option>
+                    <option value="default">by default</option>
                     <option value="A-Z">A-Z</option>
                     <option value="Z-A">Z-A</option>
                     <option value="high-low">price: high-low</option>

@@ -39,6 +39,7 @@ const productsAll = createSlice ({
             return initialState
         },
         filterBySale(state, action) {
+
             if (action.payload) {
                 const updatedProducts = state.products.map(element => {
                     if (!element.discont_price) {
@@ -111,4 +112,5 @@ const productsAll = createSlice ({
 
 export default productsAll.reducer
 export const {productsAllList, allSales, categoryProduct, 
-    saleProduct, clearData, filterBySale, filterBySort, filterByInput, refreshList} = productsAll.actions
+            saleProduct, clearData, filterBySale, filterBySort, 
+            filterByInput, refreshList} = productsAll.actions

@@ -29,3 +29,14 @@
     border: none;
     text-align: center;
 }
+
+
+@media (max-width: 480px) {
+    .addition_subtraction {
+        width: 150px;
+        height: 30px;
+    }
+    .add_sub_buttons {
+        height: 30px;
+    }
+}

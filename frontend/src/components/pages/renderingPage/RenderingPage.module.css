@@ -58,6 +58,7 @@
     max-width: 284px;
     width: 100%;
     margin-left: 16px;
+    margin-right: 16px;
     position: absolute;
     margin-top: 210px;
     opacity: 0;
@@ -97,8 +98,8 @@
 @media (max-width: 1430px) {
     .add_to_cart_btn, .add_to_cart_btn_active {
         max-width: 100%;
-        width: 20%;
-        margin-left: 0px;
+        width: 19%;
+        margin-left: 0.5%;
     }
     .category_products {
         max-width: 1440px;

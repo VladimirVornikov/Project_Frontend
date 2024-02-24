@@ -1,6 +1,8 @@
 .order_details {
     background: rgba(241, 243, 244, 1);
-    width: 548px;
+    max-width: 548px;
+    width: 100%;
+    margin-right: 40px;
     height: fit-content;
     border-radius: 10px;
     padding: 32px 32px 0px 32px;
@@ -49,4 +51,47 @@
 
 .total_price_with_discount_wrapper{
     display: flex;
+}
+
+
+@media (max-width: 1200px) {
+    .order_details {
+        padding: 10px;
+        margin-right: 10px;
+    }
+    
+}
+
+@media (max-width: 1140px) {
+    .order_details {
+        max-width: 80vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .total_wrapper {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 786px) {
+    .order_details {
+        padding: 5px;
+        align-items: flex-start;
+        max-width: 90vw;
+    }
+}
+@media (max-width: 530px) {
+    .total_price_prev {
+        font-size: 10px;
+    }
+    .total_price, .total_price_with_discount {
+        font-size: 30px;
+    }
+    .title {
+        font-size: 30px;
+    }
+    .info_about_cart {
+        font-size: 25px;
+    }
 }

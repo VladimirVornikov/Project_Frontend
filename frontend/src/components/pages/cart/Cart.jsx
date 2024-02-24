@@ -39,7 +39,7 @@ export default function Cart() {
                                 <img src={ROOT_URL + `${product.image}`} className={style.img_product}/>
                                 <span className={style.product_wrapper}>
                                     <div className={style.counter_info}>
-                                        <p className={style.productName}>{product.title}</p>
+                                        <p className={style.product_name}>{product.title}</p>
                                         <div  className={style.cross} onClick={() => dispatch(deleteProduct(product.id))}>X</div>
                                     </div>
                                     <span className={style.price_container}>
@@ -52,7 +52,9 @@ export default function Cart() {
                     </div>
                     
                     <OrderDetails totalSum={products.totalSum} countItem={products.countItem} discountFactor={products.discountFactor}/>
-                    
+                    <Link to="/AllProducts"  className={style.back_button2}>
+                        <ShowButton title={"Back to the store"} />
+                    </Link>
                 </span>
             :
                 <>
