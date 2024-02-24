@@ -61,7 +61,6 @@ label {
     padding-left: 16px;
 }
 
-
 @media (max-width: 900px) {
     .filter_container {
         display: grid;
@@ -70,7 +69,7 @@ label {
     }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 660px) {
     .filter_container {
         grid-template-columns: 1fr ;
     }

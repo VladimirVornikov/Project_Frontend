@@ -16,3 +16,10 @@
     background-color: white;
     color: black;
 }
+
+
+@media (max-width: 786px) {
+    .check_out_button {
+        width: 100px;
+    }
+}

@@ -9,7 +9,6 @@ import { ROOT_URL } from "../../..";
 export default function CategorieHome() {
     const categories = useSelector((store) => store.categories);
     const dispatch = useDispatch();
-    console.log(categories);
 
     useEffect(() => {
         dispatch(fetchCategoriesList())

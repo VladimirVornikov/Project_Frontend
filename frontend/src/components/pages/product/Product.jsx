@@ -32,16 +32,16 @@ export default function Product() {
     return (
         <div className={style.product_container}>
             <img src={`${ROOT_URL}${product.image}`} className={style.img}/>
-            <div>
                 <h3 className={style.title}>{product.title}</h3>
-                <PriceContainer price={product.price} discount={product.discont_price} isProduct={true}/>
+                <PriceContainer price={product.price} discount={product.discont_price} isProduct={true} />
                 <form onSubmit={cartAddHandler} className={style.form}>
                     <Counter number={counter}/>
                     <Button info={"Add to cart"} width={"316px"} />
                 </form>
-                <h3 className={style.description}>Description</h3>
-                <p className={style.info_block}>{product.description}</p>
-            </div>
+                <div className={style.description}>
+                    <h3 className={style.description_title}>Description</h3>
+                    <p className={style.info_block}>{product.description}</p>
+                </div>
         </div>
     )
 }

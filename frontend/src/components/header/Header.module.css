@@ -114,7 +114,7 @@ a:hover{
         gap: 18px;
     }
 }
-@media (max-width: 630px) {
+@media (max-width: 650px) {
     .burger_menu{
         display: inline;
     }

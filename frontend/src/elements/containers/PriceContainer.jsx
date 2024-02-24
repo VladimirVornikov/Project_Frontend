@@ -5,7 +5,7 @@ export default function PriceContainer(props) {
     const {price, discount, isProduct, isAllPageList, style: containerStyle} = props
 
     return (
-        <span className={isProduct ? style.product_price_container : style.all_price_conainer} style={containerStyle}>
+        <span className={isProduct ? style.product_price_container : style.all_price_container} style={containerStyle}>
             <div className={style.price_wrapper}>
                 <p className={isProduct ? style.product_price : style.main_price}>{`$${discount ? discount : price}`}</p>
                 <p className={isProduct ? style.discount_product_price : style.discount_main_price}>{discount ? `$${price}` : ''}</p>
