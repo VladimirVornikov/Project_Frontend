@@ -1,5 +1,5 @@
 .categorie_home_container {
-    max-width: 1360px;
+    max-width: 1440px;
     width: 94.4%;
     margin-left: 40px;
     margin-bottom: 80px;
@@ -33,7 +33,7 @@
     color: rgba(40, 40, 40, 1);
 }
 
-.spanCategories {
+.span_categories {
     display: flex;
 }
 

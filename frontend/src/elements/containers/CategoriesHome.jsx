@@ -17,7 +17,7 @@ export default function CategoriesHome() {
 
     return (
         <div className={style.categorie_home_container}>
-            <span className={style.spanCategories}>
+            <span className={style.span_categories}>
                 <Title title={"Categories"} />
                 <hr className={style.hr} />
                 <Link to="/Categories">
