@@ -15,6 +15,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 32px;
+    max-width: 1360px;
 }
 
 .img {
@@ -35,6 +36,7 @@
 
 .span_categories {
     display: flex;
+    max-width: 1360px;
 }
 
 .hr {

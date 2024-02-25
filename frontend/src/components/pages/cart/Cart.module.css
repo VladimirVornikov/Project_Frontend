@@ -99,8 +99,8 @@
 
 .span_cart {
     display: flex;
-    max-width: 1440px;
-    width: 94.4%;
+    max-width: 1360px;
+    width: 97%;
 }
 
 @media (max-width: 1430px) {
@@ -150,6 +150,7 @@
     .span_cart {
         max-width: 728px;
         width: 96%;
+        justify-content: space-between;
     }
     .price_container {
         flex-direction: column;

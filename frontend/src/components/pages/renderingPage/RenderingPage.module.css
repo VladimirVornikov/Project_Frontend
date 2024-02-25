@@ -11,6 +11,7 @@
     display: grid;
     grid-template-columns: repeat(4, minmax(0%, 1fr)); 
     gap: 32px;
+    max-width: 1360px;
 }
 .product_container {
     max-width: 316px;
@@ -81,6 +82,7 @@
 
 .span_categories {
     display: flex;
+    max-width: 1360px;
 
 }
 
