@@ -8,14 +8,14 @@
 @media (max-width: 480px) {
     .title {
         font-size: 40px;
-        font-weight: 500;
+        font-weight: 600;
     }
 }
 
 @media (max-width: 360px) {
     .title {
         font-size: 35px;
-        font-weight: 500;
+        font-weight: 600;
     }
 }
 

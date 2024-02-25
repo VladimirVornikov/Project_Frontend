@@ -155,8 +155,11 @@
         flex-direction: column;
         gap: 12px;
     }
-    .cross{
+    .cross {
         margin-right: 10px;
+    }
+    .hr {
+        display: none;
     }
     .product_container {
         height: auto;
@@ -187,6 +190,7 @@
     .span_cart {
         max-width: 320px;
         width: 96%;
+        justify-content: center;
     }
     .back_button2 {
         display: inline;

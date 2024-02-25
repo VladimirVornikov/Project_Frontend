@@ -69,7 +69,7 @@
         align-items: center;
     }
     .product_container {
-        margin-bottom: 0px;
+        margin-left: 6%;
     }
 }
 
@@ -81,6 +81,13 @@
         "img form"
         "description description" ;
         gap: 10px;
+    }
+    .info_block {
+        font-size: 24px;
+    }
+    .description_title {
+        font-size: 30px;
+        margin-top: 30px;
     }
 }
 

@@ -57,8 +57,7 @@
     background-color: green;
     max-width: 284px;
     width: 100%;
-    margin-left: 16px;
-    margin-right: 16px;
+    margin-left: 15px;
     position: absolute;
     margin-top: 210px;
     opacity: 0;
@@ -95,12 +94,15 @@
     margin-left: 30px;
 }
 
-@media (max-width: 1430px) {
+@media (max-width: 1460px) {
     .add_to_cart_btn, .add_to_cart_btn_active {
-        max-width: 100%;
-        width: 19%;
-        margin-left: 0.5%;
+        max-width: 19.7vw;
+        margin-left: 0.5vw;
     }
+}
+
+
+@media (max-width: 1430px) {
     .category_products {
         max-width: 1440px;
         width: 94.4%;
@@ -108,31 +110,61 @@
         margin-right: 2.8%;
         margin-bottom: 80px;
     }
+    .add_to_cart_btn_active, .add_to_cart_btn {
+        margin-left: 0.6vw;
+    }
 }
 
 @media (max-width: 1300px) {
     .name {
         margin-left: 5px;
     }
+    .add_to_cart_btn_active, .add_to_cart_btn {
+        margin-left: 0.5vw;
+    }
+}
+
+@media (max-width: 1150px) {
+    .add_to_cart_btn_active, .add_to_cart_btn {
+        margin-left: 0.25vw;
+    }
+}
+
+@media (max-width: 900px) {
+    .add_to_cart_btn_active, .add_to_cart_btn {
+        width: 19.5vw;
+        margin-left: 0.1vw;
+    }
 }
 
 
 @media (max-width: 768px) {
+    .add_to_cart_btn, .add_to_cart_btn_active {
+        max-width: 100vw;
+        width: 40.5vw;
+        margin-left: 0.5vw;
+    }
     .product_list {
         grid-template-columns: repeat(2, minmax(0%, 1fr)); 
     }
+}
+
+@media (max-width: 730px) {
     .add_to_cart_btn, .add_to_cart_btn_active {
-        width: 40%;
-        margin-left: 10px;
+        margin-left: 1vw;
     }
 }
 
+
 @media (max-width: 480px) {
     .add_to_cart_btn, .add_to_cart_btn_active {
-        margin-left: 0px;
+        margin-left: 0.5vw
+    }
+    .hr {
+        display: none;
     }
     .span_categories {
-        align-items: baseline;
+        justify-content: space-between;
     }
 }
 @media (max-width: 360px) {
@@ -141,6 +173,6 @@
     }
     .add_to_cart_btn, .add_to_cart_btn_active {
         width: 80%;
-        margin-left: 10px;
+        margin-left: 5vw;
     }
 }

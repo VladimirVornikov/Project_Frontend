@@ -16,3 +16,10 @@
     color: rgba(40, 40, 40, 1);
     background-color: white;
 }
+
+
+@media (max-width: 480px) {
+    .show_button {
+        margin-top: 10px;
+    }
+}

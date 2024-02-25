@@ -77,12 +77,18 @@
     right: 15px;
 }
 
+@media (max-width: 1160px) {
+    .discount_main_price {
+        display: none;
+    }
+}
+
 @media (max-width: 1000px) {
     .discount_all_block {
         right: 50%;
     }
     .discount_main_price {
-        font-size: 10px;
+        font-size: 15px;
     }
 }
 
@@ -92,6 +98,9 @@
     }
     .main_price {
         font-size: 30px;
+    }
+    .discount_main_price {
+        display: block;
     }
 }
 
